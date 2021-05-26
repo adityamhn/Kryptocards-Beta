@@ -1,4 +1,4 @@
-$red: #00a8a8;
+$red: #00ffff;
 $black: #191919;
 
 .hamburger-menu {
@@ -11,7 +11,7 @@ $black: #191919;
     height: 100%;
     width: 100%;
     .menu-secondary-background-color {
-      background: #fff;
+      background: #1d1d1d;
       top: 0;
       left: 0;
       right: 0;
@@ -65,10 +65,10 @@ $black: #191919;
                 width: 700px;
                 a {
                   position: absolute;
-                  color: #fff;
+                  color: #1d1d1d;
                   text-decoration: none;
                   &:hover {
-                    color: $black;
+                    color: white;
                   }
                 }
               }

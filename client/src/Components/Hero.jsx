@@ -178,7 +178,7 @@ const Hero = () => {
          
         </div>
         <div className="details-sec">
-        <MdNavigateBefore className="icon" onClick={prevSlide} />
+        {/* <MdNavigateBefore className="icon" onClick={prevSlide} /> */}
         <div className="slider-cont">
         {slides.map((slide,index) => (
             <div className="slider" key={index}>
@@ -193,7 +193,7 @@ const Hero = () => {
         ))}
         </div>
             
-        <MdNavigateNext className="icon" onClick={nextSlide} />
+        {/* <MdNavigateNext className="icon" onClick={nextSlide} /> */}
 
        
         </div>
