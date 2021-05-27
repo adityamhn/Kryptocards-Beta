@@ -110,6 +110,8 @@ const Menu = ({state}) => {
                   </span>
                 ))}
               </div>
+
+          
             </div>
           </div>
         </div>

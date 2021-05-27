@@ -65,7 +65,7 @@ $black: #d8d8d8;
                 width: 700px;
                 a {
                   position: absolute;
-                  color: #535353;
+                  color: white;
                   text-decoration: none;
                   transition:0.3s ease-in-out;
                   &:hover {
@@ -111,6 +111,7 @@ $black: #d8d8d8;
             }
           }
         }
+ 
       }
     }
   }

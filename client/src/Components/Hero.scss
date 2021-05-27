@@ -32,7 +32,7 @@
             height:100%;
             text-transform: uppercase;
             // font-weight:600;
-
+            font-family: "Spartan";
 
             #krypto-heading{
                 color:white;
@@ -43,8 +43,8 @@
                 margin-top:-80px;
                 -webkit-text-stroke: 2.9px #00ffff;
                 color:rgba(0,0,0,0);
-
-            }
+                animation:flicker 1.2s ease-in-out infinite;
+                   }
 
             }
         }
@@ -57,3 +57,11 @@
     }
  
  
+
+  @keyframes flicker{
+      from{
+
+      }to{
+          opacity:0.4
+      }
+  }
