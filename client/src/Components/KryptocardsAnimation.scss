@@ -1,0 +1,15 @@
+#main-logo-rotation-section{
+    transform-origin: center;
+    transform-box:fill-box;
+    cursor: pointer;
+    animation:rotate 2.5s linear infinite;
+}
+
+
+@keyframes rotate {
+    from{
+        transform:rotate(0deg);
+    }to{
+        transform :rotate(359deg);
+    }
+}

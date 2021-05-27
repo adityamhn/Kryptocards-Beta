@@ -83,7 +83,7 @@ const Menu = ({state}) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
                       to='/'>
-                      Discover
+                      Explore
                     </Link>
                   </li>
                   <li>

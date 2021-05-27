@@ -1,5 +1,5 @@
-$red: #00ffff;
-$black: #191919;
+$red: #050304;
+$black: #d8d8d8;
 
 .hamburger-menu {
     display: none;
@@ -11,7 +11,7 @@ $black: #191919;
     height: 100%;
     width: 100%;
     .menu-secondary-background-color {
-      background: #1d1d1d;
+      background: #00ffffab;
       top: 0;
       left: 0;
       right: 0;
@@ -65,10 +65,11 @@ $black: #191919;
                 width: 700px;
                 a {
                   position: absolute;
-                  color: #1d1d1d;
+                  color: #535353;
                   text-decoration: none;
+                  transition:0.3s ease-in-out;
                   &:hover {
-                    color: white;
+                    color: #00ffff;
                   }
                 }
               }
@@ -90,7 +91,7 @@ $black: #191919;
         .locations {
           position: absolute;
           bottom: -80px;
-          color: #fff;
+          color: #d8d8d8;
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;

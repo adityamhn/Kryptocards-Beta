@@ -4,7 +4,8 @@ const nodemailer = require('nodemailer');
 const teamMailList = [
     'aryamannsingh9@gmail.com',
     'arnavagr22@gmail.com',
-    'aditya530026@gmail.com'
+    'aditya530026@gmail.com',
+    'kunal18042002@gmail.com'
 ]
 
 const transporter = nodemailer.createTransport({

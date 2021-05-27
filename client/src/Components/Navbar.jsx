@@ -4,8 +4,9 @@ import './Navbar.scss'
 import { Button, Container, Form } from 'react-bootstrap'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoMdClose } from 'react-icons/io'
-
+import {KryptocardsAnimation} from './KryptocardsAnimation';
 import Menu from "./Menu";
+
 
 const Navbar = ({ history }) => {
     // State of our Menu
@@ -60,7 +61,7 @@ const Navbar = ({ history }) => {
             <div className="wrapper">
                 <div className="inner-header">
                     <div className="logo">
-                    <Link to='/'>Krypto Cards
+                    <Link to='/'><KryptocardsAnimation/>
                     </Link>
                     </div>
 
