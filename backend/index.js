@@ -1,4 +1,6 @@
-require('dotenv').config({path:__dirname+'/.env'});
+require('dotenv').config({
+  path: __dirname + '/.env'
+});
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
@@ -31,48 +33,54 @@ app.use((req, res, next) => {
 })
 
 app.use((req, res, next) => {
-    bodyParser.json({ limit: '50mb', extended: true })(req, res, (err) => {
-      if (err) {
-        console.error(err)
-        return res.sendStatus(400) // Bad request
-      }
-      next()
-    })
+  bodyParser.json({
+    limit: '50mb',
+    extended: true
+  })(req, res, (err) => {
+    if (err) {
+      console.error(err)
+      return res.sendStatus(400) // Bad request
+    }
+    next()
   })
+})
 
-  app.use(bodyParser.urlencoded({ extended: true }))
-  app.use(bodyParser.json({extended:true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+app.use(bodyParser.json({
+  extended: true
+}));
 
-  const db = process.env.MONGO_DB_URI
-  console.log(db);
+const db = process.env.MONGO_DB_URI
+console.log(db);
 
 
-  mongoose
+mongoose
   .connect(db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-      
+
     console.log('MongoDB Connected');
 
-  app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to my API' })
+    app.get('/', (req, res) => {
+      res.json({
+        message: 'Welcome to my API'
+      })
+    })
+
+
+    const PORT = process.env.PORT || 8080
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}.`)
+    })
+
+    app.use('/api', require('./routes/routes'));
+
   })
- 
-
-  const PORT = process.env.PORT || 8080
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`)
-})
-
-    app.use('/api',require('./routes/routes'));
-
-})
-  .catch((err) => {console.log(err)
-console.log("Coudn't connect")
-})
-
-
-
-
+  .catch((err) => {
+    console.log(err)
+    console.log("Coudn't connect")
+  })

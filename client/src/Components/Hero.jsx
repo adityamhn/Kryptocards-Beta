@@ -7,7 +7,8 @@ import {MdNavigateNext,MdNavigateBefore} from 'react-icons/md'
 import madar_uchiha from '../images/madar_uchiha.gif'
 import madara from '../images/madara.svg'
 import lelouch from '../images/lelouch.svg'
-
+import {store} from '../app/store';
+import {changeLogoSign} from '../features/NavbarLogo/NavbarLogoSlice';
 
 
 const Hero = () => {
@@ -19,6 +20,7 @@ const Hero = () => {
     const timeout = useRef(null)
 
     useEffect(() => {
+        store.dispatch(changeLogoSign({value : "LOGO"}))
         const nextSlide = () => {
             setCurrent(current => (current === length - 1 ? 0 : current + 1))
         }
@@ -55,7 +57,7 @@ const Hero = () => {
 
     return (
         <>
-        <Navbar />
+    
         <Container fluid className="hero-cont">
         <div className="wrapper">
             

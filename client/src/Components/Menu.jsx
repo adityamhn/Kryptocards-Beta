@@ -91,7 +91,7 @@ const Menu = ({state}) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
-                      to='/'>
+                      to='/contact'>
                       Contact us
                     </Link>
                   </li>

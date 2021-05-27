@@ -1,5 +1,7 @@
 const nodemailer = require('nodemailer');
 
+const nodeMailerUser = process.env.GOOGLE_EMAIL;
+const nodeMailerPassword = process.env.GOOGLE_PASSWORD;
 
 const teamMailList = [
     'aryamannsingh9@gmail.com',
@@ -13,8 +15,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure:true,
     auth: {
-      user: process.ENV.GOOGLE_EMAIL,
-      pass: process.ENV.GOOGLE_PASSWORD,
+      user: nodeMailerUser,
+      pass: nodeMailerPassword,
     },
 
 
@@ -22,7 +24,7 @@ const transporter = nodemailer.createTransport({
   
 
 
-exports.sendEmailToRecipient = (email,name)=>{
+exports.sendEmailToRecipient = (name,email)=>{
     var mainOptions = {
         from: nodeMailerUser,
         to: email,
@@ -78,7 +80,7 @@ exports.sendEmailToTeam = ({name,email,phoneNumber,message})=>{
         if (err) {
           console.log(err)
           console.log("Error sending mail to the team.")
-          return res.status(500).send({ message: "ERROR_SENDING_EMAIL" })
+           throw new Error("Error sending the mail!");
         }
         else{
             console.log("Mail sent to the team.");

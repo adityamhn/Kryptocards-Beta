@@ -6,10 +6,15 @@ import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoMdClose } from 'react-icons/io'
 import {KryptocardsAnimation} from './KryptocardsAnimation';
 import Menu from "./Menu";
+import {useSelector} from 'react-redux';
+import {KryptoCardsNavbarText} from './KryptoCardsNavbarText';
 
 
 const Navbar = ({ history }) => {
     // State of our Menu
+    const iconToShow = useSelector(state=>state.navbar.value);
+    
+
     const [state, setState] = useState({
         initial: false,
         clicked: null,
@@ -61,7 +66,7 @@ const Navbar = ({ history }) => {
             <div className="wrapper">
                 <div className="inner-header">
                     <div className="logo">
-                    <Link to='/'><KryptocardsAnimation/>
+                    <Link to='/'>{iconToShow === "LOGO" ? <KryptocardsAnimation/> : iconToShow==="TEXT" ? <KryptoCardsNavbarText/> : null}
                     </Link>
                     </div>
 

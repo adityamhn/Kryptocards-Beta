@@ -39,6 +39,14 @@
                 margin-bottom:-80px;
                 z-index:1;
             }
+
+  @keyframes flicker{
+    from{
+
+    }to{
+        opacity:0.4
+    }
+}
             #cards-heading{
                 margin-top:-80px;
                 -webkit-text-stroke: 2.9px #00ffff;
@@ -57,11 +65,3 @@
     }
  
  
-
-  @keyframes flicker{
-      from{
-
-      }to{
-          opacity:0.4
-      }
-  }

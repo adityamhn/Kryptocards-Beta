@@ -1,4 +1,5 @@
 const Mailer = require('../middleware/Mailer');
+const ContactFormModel = require('../models/ContactFormModel');
 
 
 
@@ -17,10 +18,26 @@ exports.sendContactFormMail = (req,res,next)=>{
     try{
         Mailer.sendEmailToRecipient(name,email);
         Mailer.sendEmailToTeam(req.body);
-        return res.status(200).json({
-            success:true,
-            
+        const newContactForm = new ContactFormModel(req.body);
+        newContactForm.save()
+        .then(n=>{
+            console.log("Contact form saved!");
+             res.status(200).json({
+                success:true,
+                
+            })
+            next();
         })
+        .catch(err=>{
+            console.log("Error saving the contact form!");
+            console.log(err);
+            return res.status(500)
+            .send({
+                success:false,
+                message:"Unknown Error!"
+            })
+        })
+        
     }catch (e){
         console.log("Error sending the mails!");
         console.log(e);
