@@ -1,21 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { StaticRouter } from 'react-router';
  
 
 const slice = createSlice({
     name: 'user',
-    initialState: {value : "LOGO"},
+    initialState: {value : "LOGO",show:true},
     reducers: {
         changeLogoSign: (state, action) => {
             state.value = action.payload.value;
-            console.log(`NEW STATE : ${state.value}`)
+        
         },
+        showNavbar : (state,action)=>{
+            state.show = action.payload.show;
+        }
 
     },
     
 
    
 });
-export const {changeLogoSign} = slice.actions;
+export const {changeLogoSign,showNavbar} = slice.actions;
 export default slice.reducer 
 
  

@@ -1,0 +1,29 @@
+import React, { useEffect } from 'react'
+import { store } from '../../app/store'
+import './ComingSoon.scss';
+import { showNavbar } from '../../features/NavbarLogo/NavbarLogoSlice';
+import { Link } from 'react-router-dom';
+export const ComingSoon = () => {
+    useEffect(() => {
+
+        store.dispatch(showNavbar({ show: false }))
+
+    }, [])
+    return (
+
+        <div id="coming-soon-text-main-div">
+            <div className="container">
+
+                <div class="glitch" data-text="COMING SOON">COMING SOON</div>
+                <div class="glow">COMING SOON</div>
+                <p class="subtitle">Great Things Take Time</p>
+
+                <div class="scanlines"></div>
+                {/* <Link to="/">
+                <button id="go-home-button">GO HOME</button>
+                </Link> */}
+            </div>
+
+        </div>
+    )
+}
