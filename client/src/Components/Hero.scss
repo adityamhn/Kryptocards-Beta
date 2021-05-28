@@ -1,0 +1,69 @@
+.hero-cont {
+    background: url(../assets/backgrounds/landing-page-main-background.png) no-repeat center center fixed;
+    background-size: cover;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin-top: -80px;
+    overflow: hidden;
+    padding: 0;
+    display:flex;
+    background-position: center;
+    align-items:center;
+    background-size: cover;
+    justify-content: center;
+    .wrapper {
+        
+        width:100%;
+        height:80vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 4rem;
+
+        .text-sec {
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            font-size:11rem;
+            flex:1;
+            cursor: pointer;
+            height:100%;
+            text-transform: uppercase;
+            // font-weight:600;
+            font-family: "Spartan";
+
+            #krypto-heading{
+                color:white;
+                margin-bottom:-80px;
+                z-index:1;
+            }
+
+  @keyframes flicker{
+    from{
+
+    }to{
+        opacity:0.4
+    }
+}
+            #cards-heading{
+                margin-top:-80px;
+                -webkit-text-stroke: 2.9px #00ffff;
+                color:rgba(0,0,0,0);
+                animation:flicker 1.2s ease-in-out infinite;
+                   }
+
+            }
+        }
+
+        .details-sec {          
+            flex:1;
+        
+            height:100%;
+        }
+    }
+ 
+ 

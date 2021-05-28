@@ -1,0 +1,37 @@
+
+
+@media screen and (max-width:484px) {
+    #krypto{
+        font-size:2rem;
+    }
+    #cards{
+        font-size:2rem;
+    }
+}
+#krypto-cards-navbar-text-main-div{
+    font-size:2.7rem;
+    margin:0 1rem;
+    font-family:"Spartan";
+    font-weight:500;
+    font-style:normal;
+    text-transform: uppercase;
+
+
+    #krypto{
+        
+        color:white;
+    }
+
+  @keyframes flicker{
+    from{
+
+    }to{
+        opacity:0.7
+    }
+}
+    #cards{
+                -webkit-text-stroke: 1.4px #00ffff;
+                color:rgba(0,0,0,0);
+                animation:flicker 1.2s ease-in-out infinite;
+    }
+}
