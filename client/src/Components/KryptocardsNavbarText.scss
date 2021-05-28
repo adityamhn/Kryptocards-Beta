@@ -1,6 +1,25 @@
+
+
+@media screen and (max-width:484px) {
+    #krypto{
+        font-size:2rem;
+    }
+    #cards{
+        font-size:2rem;
+    }
+}
+
+@media screen and (max-width:300px){
+    #krypto{
+        font-size:1.1rem;
+    }
+    #cards{
+        font-size:1.1rem;
+    }
+}
 #krypto-cards-navbar-text-main-div{
     font-size:2.7rem;
-    margin:0 2rem;
+    margin:0 1rem;
     font-family:"Spartan";
     font-weight:500;
     font-style:normal;

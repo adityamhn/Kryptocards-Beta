@@ -89,7 +89,7 @@ export const ContactUsPage = () => {
 
 
 
-                                <div className="form-row">
+                                <div className="form-row" >
                                     <Form.Group className="form-group">
                                         <Form.Label>Your Email</Form.Label>
                                         <Form.Control
