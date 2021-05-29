@@ -54,11 +54,6 @@ $black: #d8d8d8;
             ul {
               margin: 0;
               padding: 0;
-              @media screen and (max-width:650px) {
-                li{
-                  font-size: 3rem;
-                }
-              }
               li {
                 list-style: none;
                 font-size: 6rem;
@@ -76,6 +71,11 @@ $black: #d8d8d8;
                   &:hover {
                     color: #00ffff;
                   }
+                }
+              }
+              @media screen and (max-width:650px) {
+                li{
+                  font-size: 3rem;
                 }
               }
             }
