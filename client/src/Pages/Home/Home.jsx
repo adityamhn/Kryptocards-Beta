@@ -7,7 +7,7 @@ import { WhatWeDo } from '../../Components/WhatWeDo';
 export const Home = () => {
 
     useEffect(() => {
-        store.dispatch(changeLogoSign({ value: "TEXT" }))
+        store.dispatch(changeLogoSign({value:"LOGO"}))
         store.dispatch(showNavbar({show:true}))
     
    

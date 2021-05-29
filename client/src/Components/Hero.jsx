@@ -20,7 +20,7 @@ export const Hero = () => {
     const timeout = useRef(null)
 
     useEffect(() => {
-        store.dispatch(changeLogoSign({value : "LOGO"}))
+  
         const nextSlide = () => {
             setCurrent(current => (current === length - 1 ? 0 : current + 1))
         }

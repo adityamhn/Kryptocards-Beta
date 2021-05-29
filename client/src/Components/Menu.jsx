@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import './Menu.scss'
-import spiderman from "../images/spiderman.jpg";
+import spiderman from "../images/fiction.jpg";
 import basketball from "../images/basketball.jpg";
 import football from "../images/football.jpg";
-import konoha from "../images/konoha.jpg";
+import konoha from "../images/anime.jpg";
 import {
     staggerText,
     staggerReveal,
@@ -102,12 +102,15 @@ const Menu = ({state}) => {
                 Categories:
                 {/* Returning the list of cities */}
                 {cities.map(el => (
+                  <Link className="menu-link" to="/coming-soon">
                   <span
                     key={el.name}
                     onMouseEnter={() => handleCity(el.image, cityBackground)}
                     onMouseOut={() => handleCityReturn(cityBackground)}>
                     {el.name}
                   </span>
+                  </Link>
+                  
                 ))}
               </div>
 
