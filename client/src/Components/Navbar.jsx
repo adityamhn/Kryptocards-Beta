@@ -4,16 +4,16 @@ import './Navbar.scss'
 import { Button, Container, Form } from 'react-bootstrap'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoMdClose } from 'react-icons/io'
-import {KryptocardsAnimation} from './KryptocardsAnimation';
+import { KryptocardsAnimation } from './KryptocardsAnimation';
 import Menu from "./Menu";
-import {useSelector} from 'react-redux';
-import {KryptoCardsNavbarText} from './KryptoCardsNavbarText';
+import { useSelector } from 'react-redux';
+import { KryptoCardsNavbarText } from './KryptoCardsNavbarText';
 
 
 const Navbar = ({ history }) => {
     // State of our Menu
-    const iconToShow = useSelector(state=>state.navbar.value);
-    
+    const iconToShow = useSelector(state => state.navbar.value);
+    const showNavbar = useSelector(state => state.navbar.show);
 
     const [state, setState] = useState({
         initial: false,
@@ -61,28 +61,31 @@ const Navbar = ({ history }) => {
         }, 1200);
     };
 
-    return (<>
-        <Container fluid className="navbar-cont">
+    return (showNavbar ? (
+        <><Container fluid className="navbar-cont">
             <div className="wrapper">
                 <div className="inner-header">
                     <div className="logo">
-                    <Link to='/'>{iconToShow === "LOGO" ? <KryptocardsAnimation/> : iconToShow==="TEXT" ? <KryptoCardsNavbarText/> : null}
-                    </Link>
+                        <Link to='/'>{iconToShow === "LOGO" ? <KryptocardsAnimation /> : iconToShow === "TEXT" ? <KryptoCardsNavbarText /> : null}
+                        </Link>
                     </div>
 
                     <div className="menu">
                         <button disabled={disabled} onClick={handleMenu}>
-                            {state.menuName === "Menu" ? 
-                        <HiMenuAlt4 className="menu-icon" /> : <IoMdClose className="menu-icon" />
-                              }
+                            {state.menuName === "Menu" ?
+                                <HiMenuAlt4 className="menu-icon" /> : <IoMdClose className="menu-icon" />
+                            }
                         </button>
                     </div>
 
                 </div>
             </div>
         </Container>
-        <Menu state={state} />
-    </>
+            <Menu state={state} />
+
+        </>) : (<></>)
+
+
     )
 }
 

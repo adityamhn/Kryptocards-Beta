@@ -11,7 +11,7 @@ import {store} from '../app/store';
 import {changeLogoSign} from '../features/NavbarLogo/NavbarLogoSlice';
 
 
-const Hero = () => {
+export const Hero = () => {
     const [rotate,setRotate] = useState(0)
 
     const [slides, setSlides] = useState([lelouch,madara,lelouch,madara]);
@@ -76,4 +76,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+ 

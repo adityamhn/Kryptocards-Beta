@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 import './ContactUsPage.scss';
 import { store } from '../../app/store';
-import { changeLogoSign } from '../../features/NavbarLogo/NavbarLogoSlice'
+import { changeLogoSign,showNavbar } from '../../features/NavbarLogo/NavbarLogoSlice'
 import { Form, Button } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as yup from 'yup';
@@ -50,7 +50,9 @@ export const ContactUsPage = () => {
 
     useEffect(() => {
         store.dispatch(changeLogoSign({ value: "TEXT" }))
-
+        store.dispatch(showNavbar({show:true}))
+    
+   
 
     }, [])
 
