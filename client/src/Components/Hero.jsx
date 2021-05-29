@@ -67,8 +67,6 @@ export const Hero = () => {
         </div>
         <div className="details-sec">
         
-
-       
         </div>
         </div>
         </Container>
