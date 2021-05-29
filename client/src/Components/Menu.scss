@@ -54,6 +54,10 @@ $black: #d8d8d8;
             ul {
               margin: 0;
               padding: 0;
+<<<<<<< HEAD
+=======
+         
+>>>>>>> ARYAMANN
               li {
                 list-style: none;
                 font-size: 6rem;
@@ -63,6 +67,7 @@ $black: #d8d8d8;
                 overflow: hidden;
                 position: relative;
                 width: 700px;
+        
                 a {
                   position: absolute;
                   color: white;
@@ -114,6 +119,10 @@ $black: #d8d8d8;
               padding: 8px 24px;
               border-radius: 4px;
             }
+          }
+          .menu-link{
+            text-decoration:none;
+            color:white;
           }
         }
  

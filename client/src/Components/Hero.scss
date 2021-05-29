@@ -1,23 +1,23 @@
 .hero-cont {
-    background: url(../assets/backgrounds/landing-page-main-background.png) no-repeat center center fixed;
-    background-size: cover;
+   
     max-width: 100vw;
     min-height: 100vh;
     margin-top: -80px;
     overflow: hidden;
     padding: 0;
     display:flex;
-    background-position: center;
+    
     align-items:center;
  
     justify-content: center;
     .wrapper {
         
         width:100%;
-        height:80vh;
+        // height:80vh;
         overflow: hidden;
         display: flex;
         flex-direction: row;
+        flex-wrap:wrap;
         justify-content: center;
         align-items: center;
         padding: 0;
@@ -60,14 +60,33 @@
         .details-sec{
             display: flex;
             justify-content: center;
-        }
-        }
-
-        .details-sec {          
             flex:1;
-        
             height:100%;
-        }
+.swiper-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    padding: 2rem;
+    .swiper-card-sec {
+        display: flex;
+        justify-content: center;
+        transition: all 0.4s linear;
+
+      .swiper-card  {width: 15rem;}
+
+      .card-active {
+          transform: translate3d(0,0,100);
+          transform: scale(1.2);
+          margin: 0rem -6.5rem;
+          z-index: 2;
+      }
     }
+}
+}
+        }
+        }
+    
+ 
  
  
