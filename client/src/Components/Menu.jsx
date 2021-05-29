@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import './Menu.scss'
-import spiderman from "../images/spiderman.jpg";
 import basketball from "../images/basketball.jpg";
 import football from "../images/football.jpg";
 import konoha from "../images/konoha.jpg";
@@ -21,7 +20,6 @@ const cities = [
   { name: "Basketball", image: basketball },
   { name: "Football", image: football },
   { name: "Anime", image: konoha },
-  { name: "Fiction", image: spiderman }
 ];
 
 
