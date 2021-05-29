@@ -74,7 +74,11 @@ export const handleHoverExit = e => {
 export const handleCity = (city, target) => {
   gsap.to(target, {
     duration: 0,
-    background: `url(${city}) center center`
+    background: `url(${city}) no-repeat center center fixed`,
+    backgroundSize:"cover",
+    minWidth:"100vw",
+    minHeight:"100vh"
+
   });
   gsap.to(target, {
     duration: 0.4,

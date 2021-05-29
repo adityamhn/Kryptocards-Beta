@@ -7,6 +7,7 @@ const slice = createSlice({
     initialState: {value : "LOGO",show:true},
     reducers: {
         changeLogoSign: (state, action) => {
+            console.log("Logo changed")
             state.value = action.payload.value;
         
         },

@@ -4,19 +4,25 @@ import {store} from '../../app/store';
 import {changeLogoSign,
     showNavbar} from '../../features/NavbarLogo/NavbarLogoSlice';
 import { WhatWeDo } from '../../Components/WhatWeDo';
+import './Home.scss';
+
+
 export const Home = () => {
 
     useEffect(() => {
-        store.dispatch(changeLogoSign({ value: "TEXT" }))
+        store.dispatch(changeLogoSign({value:"LOGO"}))
         store.dispatch(showNavbar({show:true}))
     
    
 
     }, [])
     return (
-        <div>
+        <div className="background-full">
+            <div className="layer">
             <Hero/>
             <WhatWeDo/>
+            
+            </div>
             
         </div>
     )

@@ -13,15 +13,13 @@ export const ComingSoon = () => {
 
         <div id="coming-soon-text-main-div">
             <div className="container">
-
+                <Link to="/">
                 <div class="glitch" data-text="COMING SOON">COMING SOON</div>
                 <div class="glow">COMING SOON</div>
                 <p class="subtitle">Great Things Take Time</p>
-
+                
                 <div class="scanlines"></div>
-                {/* <Link to="/">
-                <button id="go-home-button">GO HOME</button>
-                </Link> */}
+                </Link>
             </div>
 
         </div>
