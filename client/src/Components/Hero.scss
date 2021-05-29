@@ -2,6 +2,7 @@
     width: 100vw;
     min-height: 100vh;
     padding: 0;
+    font-family: "Spartan";
 
     .hero-wrapper {
         display: flex;
@@ -15,20 +16,44 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            width: 55%;
+
 
             .title1 {
                 color: white;
                 font-size: 9rem;
-                margin-bottom: -40px;
+                margin-bottom: -36px;
             }
 
             .title2 {
-                -webkit-text-stroke: 2.9px #00ffff;
-                color: rgba(0, 0, 0, 0);
+                color: #05030400;
                 font-size: 9rem;
-                margin-top: -40px;
+                -webkit-text-stroke: 1.5px #00ffff;
+                margin-top: -36px;
+            }
+        }
 
+        .swiper-sec {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45%;
+            padding: 2rem;
+            .swiper-card-sec {
+                display: flex;
+                justify-content: center;
+                transition: all 0.4s linear;
+
+              .swiper-card  {width: 15rem;}
+
+              .card-active {
+                  transform: translate3d(0,0,100);
+                  transform: scale(1.2);
+                  margin: 0rem -6.5rem;
+                  z-index: 2;
+              }
             }
         }
     }
 }
+
