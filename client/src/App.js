@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Hero from './Components/Hero';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
     <Router >
       <Switch>
-        <Route exact path="/" component={Hero} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </Router>
   );

@@ -16,7 +16,12 @@ const Hero = () => {
     return (
         <>
         <Container fluid className="hero-cont">
-       
+        <div className="hero-wrapper">
+            <div className="title-sec">
+                <h1 className="title1">KRYPTO</h1>
+                <h1 className="title2">CARDS</h1>
+            </div>
+        </div>       
         </Container>
         </>
     )
