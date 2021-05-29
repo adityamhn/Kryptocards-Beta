@@ -28,7 +28,6 @@
             flex-direction:column;
             align-items: center;
             justify-content: center;
-            font-size:11rem;
             flex:1;
             cursor: pointer;
             height:100%;
@@ -38,11 +37,18 @@
 
             #krypto-heading{
                 color:white;
-                margin-bottom:-80px;
+                margin-bottom:-70px;
+                font-size:10rem;
                 z-index:1;
             }
+            @media screen and (max-width:800px){
+                #krypto-heading{
+                    font-size:7rem;
+                    margin-top:-40px;
+                }
+            }
 
-  @keyframes flicker{
+    @keyframes flicker{
     from{
 
     }to{
@@ -50,11 +56,19 @@
     }
 }
             #cards-heading{
-                margin-top:-80px;
+                margin-top:-70px;
                 -webkit-text-stroke: 2.9px #00ffff;
+                font-size:10rem;
                 color:rgba(0,0,0,0);
                 animation:flicker 1.2s ease-in-out infinite;
-                   }
+                }
+            @media screen and (max-width:800px){
+                #cards-heading{
+                    font-size:7rem;
+                    margin-top:-30px;
+                }
+            }
+
 
             }
         .details-sec{
