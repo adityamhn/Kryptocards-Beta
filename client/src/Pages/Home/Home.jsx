@@ -4,6 +4,9 @@ import {store} from '../../app/store';
 import {changeLogoSign,
     showNavbar} from '../../features/NavbarLogo/NavbarLogoSlice';
 import { WhatWeDo } from '../../Components/WhatWeDo';
+import './Home.scss';
+
+
 export const Home = () => {
 
     useEffect(() => {
@@ -14,9 +17,12 @@ export const Home = () => {
 
     }, [])
     return (
-        <div>
+        <div className="background-full">
+            <div className="layer">
             <Hero/>
             <WhatWeDo/>
+            
+            </div>
             
         </div>
     )

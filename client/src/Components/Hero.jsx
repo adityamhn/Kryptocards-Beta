@@ -9,11 +9,14 @@ import madara from '../images/madara.svg'
 import lelouch from '../images/lelouch.svg'
 import {store} from '../app/store';
 import {changeLogoSign} from '../features/NavbarLogo/NavbarLogoSlice';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/swiper.scss";
+// import "swiper/components/navigation/navigation.scss";
+
+
+
+// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
     const [rotate,setRotate] = useState(0)
