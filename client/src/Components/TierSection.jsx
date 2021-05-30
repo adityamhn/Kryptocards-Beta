@@ -1,6 +1,6 @@
 import React from 'react'
 import './TierSection.scss';
-import card from '../images/golden_card_square.png';
+import card from '../images/final.svg';
 import silverTorch from '../assets/Torches/silver-torch.svg'
 import bronzeTorch from '../assets/Torches/bronze-torch.svg'
 import goldTorch from '../assets/Torches/gold-torch.svg'
