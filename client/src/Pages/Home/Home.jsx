@@ -5,6 +5,7 @@ import {changeLogoSign,
     showNavbar} from '../../features/NavbarLogo/NavbarLogoSlice';
 import { WhatWeDo } from '../../Components/WhatWeDo';
 import './Home.scss';
+import { TierSection } from '../../Components/TierSection';
 
 
 export const Home = () => {
@@ -21,7 +22,7 @@ export const Home = () => {
             <div className="layer">
             <Hero/>
             <WhatWeDo/>
-            
+            <TierSection/>
             </div>
             
         </div>
