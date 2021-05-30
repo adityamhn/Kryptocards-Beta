@@ -1,0 +1,215 @@
+#tier-section-main-div {
+    width: 100%;
+    font-family: "Spartan", sans-serif;
+
+    text-align: center;
+
+    #main-heading {
+
+        margin: 2rem 0;
+        color: white;
+        font-size: 3.5rem;
+        font-weight: medium;
+        text-transform: uppercase;
+
+    }
+
+    #cards-section {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        @keyframes gold-card-hover {
+            from {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+            }
+
+            50% {
+                transform: translateY(-40px);
+                box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.42);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.42);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.42);
+            }
+
+            to {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+            }
+        }
+
+        @keyframes silver-card-hover {
+            from {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+            }
+
+            50% {
+                transform: translateY(-40px);
+                box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.42);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.42);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.42);
+            }
+
+            to {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+            }
+        }
+
+        @keyframes bronze-card-hover {
+            from {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+            }
+
+            50% {
+                transform: translateY(-40px);
+                box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.42);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.42);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.42);
+            }
+
+            to {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+            }
+        }
+
+        @keyframes platinum-card-hover {
+            from {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+            }
+
+            50% {
+                transform: translateY(-40px);
+                box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.42);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.42);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.42);
+            }
+
+            to {
+                transform: translateY(0);
+                box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+            }
+        }
+
+
+        #bronze-card-area:hover>#bronze-card {
+            animation: bronze-card-hover 1.4s ease-in-out infinite;
+
+        }
+
+        #platinum-card-area:hover>#platinum-card {
+            animation: platinum-card-hover 1.4s ease-in-out infinite;
+
+        }
+
+        #gold-card-area:hover>#gold-card {
+            animation: gold-card-hover 1.4s ease-in-out infinite;
+
+        }
+
+        #silver-card-area:hover>#silver-card {
+            animation: silver-card-hover 1.4s ease-in-out infinite;
+
+        }
+
+
+
+
+        @keyframes torch-animation {
+            from {
+                opacity: .6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: .6;
+            }
+        }
+
+
+        .card-area:hover>.torch-styling {
+            animation: torch-animation 1.4s ease-in-out infinite;
+        }
+
+
+
+
+        .card-area {
+            margin: 2rem;
+            max-width: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .torch-styling{
+                opacity:0.6;
+            }
+
+            .card-text {
+                height: 8rem;
+                color: white;
+                font-size: 1.3rem;
+                width: 100%;
+                text-transform: uppercase;
+                font-family: "Cinzel"
+            }
+
+
+
+            #gold-card {
+                box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(255, 215, 0, 0.30);
+            }
+
+            #platinum-card {
+                box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(202, 202, 202, 0.30);
+            }
+
+            #silver-card {
+                box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(229, 228, 226, 0.30);
+            }
+
+            #bronze-card {
+                box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+                -webkit-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+                -moz-box-shadow: -1px -1px 242px 20px rgba(205, 127, 50, 0.30);
+            }
+
+        }
+
+
+    }
+}
