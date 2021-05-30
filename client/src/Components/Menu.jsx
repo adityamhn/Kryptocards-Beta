@@ -82,11 +82,11 @@ const Menu = ({state}) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/'>
+                      to='/coming-soon'>
                       Explore
                     </Link>
                   </li>
-                  <li>
+                  <li id="up">
                     <Link
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}

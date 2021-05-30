@@ -3,17 +3,17 @@
     
       width:100vw;
       height:100vh;
-      background: url(../../assets/backgrounds/contact-form-background.png) no-repeat center center fixed;
+      background: url(../../assets/backgrounds/contact-form-background.png) no-repeat center fixed;
       background-size: cover;
-     overflow: hidden !important;
+      overflow:hidden;
     .container {
-        // overflow: hidden;
         font-family: "Spartan", sans-serif;
         font-style: italic;
         position: absolute;
         transform: translate(-50%, -50%);
         top: 40%;
         left: 50%;
+
 
         .glitch {
             color: #00ffff;
@@ -57,7 +57,7 @@
               
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 100;
-            font-size: .8vw;
+            font-size: 1.2vw;
             color: white;
             text-transform: uppercase;
             letter-spacing: 1em;
@@ -98,6 +98,16 @@
          color:white;
 
       }
+      @media screen and (max-width:600px){
+        .glitch{
+          font-size: 9.4vw;
+        }
+        
+        .subtitle{
+          font-size: 1.6vw;
+        }
+ 
+      }
       
       @keyframes glitch {
         1%{
@@ -112,8 +122,8 @@
         $steps: 30;
         @for $i from 1 through $steps {
           #{percentage($i*(1/$steps))} {
-            $top: random(100);
-            $bottom: random(101 - $top);
+            $top: random(99);
+            $bottom: random(100 - $top);
             clip-path: inset(#{$top}px 0 #{$bottom}px 0);
           }
         }
@@ -123,8 +133,8 @@
         $steps: 30;
         @for $i from 0 through $steps {
           #{percentage($i*(1/$steps))} {
-            $top: random(100);
-            $bottom: random(101 - $top);
+            $top: random(99);
+            $bottom: random(100 - $top);
             clip-path: inset(#{$top}px 0 #{$bottom}px 0);
           }
         }
