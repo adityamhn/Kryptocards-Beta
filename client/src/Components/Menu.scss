@@ -1,5 +1,5 @@
-$red: #050304;
-$black: #d8d8d8;
+$red: #000000;
+$black: #00ffff;
 
 .hamburger-menu {
     display: none;
@@ -11,39 +11,41 @@ $black: #d8d8d8;
     height: 100%;
     width: 100%;
     .menu-secondary-background-color {
-      background: #00ffffab;
+      background: #00ffffa4;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       position: fixed;
-      min-height: 100vh;
-      width: 100vw;
+      height: 100%;
+      width: 100%;
       z-index: -1;
     }
     .menu-layer {
       position: relative;
       background: $red;
       height: 100%;
-      // overflow: hidden;
+      overflow: hidden;
       .menu-city-background {
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         position: absolute;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         opacity: 0;
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
         animation-name: backgroundEffect;
-        animation-duration: 30s;
+        animation-duration: 1s;
         animation-iteration-count: infinite;
       }
       .wrapper {
         position: relative;
         .menu-links {
+          margin-left:5rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -54,7 +56,6 @@ $black: #d8d8d8;
             ul {
               margin: 0;
               padding: 0;
-         
               li {
                 list-style: none;
                 font-size: 6rem;
@@ -64,20 +65,13 @@ $black: #d8d8d8;
                 overflow: hidden;
                 position: relative;
                 width: 700px;
-        
                 a {
                   position: absolute;
-                  color: white;
+                  color: #fff;
                   text-decoration: none;
-                  transition:0.1s ease-in-out;
                   &:hover {
-                    color: #00ffff;
+                    color: $black;
                   }
-                }
-              }
-              @media screen and (max-width:650px) {
-                li{
-                  font-size: 3rem;
                 }
               }
             }
@@ -98,11 +92,12 @@ $black: #d8d8d8;
         .locations {
           position: absolute;
           bottom: -80px;
-          color: #d8d8d8;
+          color: #fff;
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;
           span {
+            color:white;
             cursor: pointer;
             &:first-child {
               margin-left: 64px;
@@ -111,57 +106,13 @@ $black: #d8d8d8;
             margin: 0 32px;
             transition: 0.3s ease-in-out;
             &:hover {
-              color: #fff;
-              background: $black;
+              color: black;
+              background: white;
               padding: 8px 24px;
               border-radius: 4px;
-            }
-          }
-          .menu-link{
-            text-decoration:none;
-            color:white;
-          }
-        }
-        @media screen and (max-width:900px){
-          .locations{
-            font-size:0.7rem;
-            span {
-    
-              &:first-child {
-                margin-left: 50px;
-              }
-              margin: 0 16px;
-        
-            }
-          }
-        }
- 
-        @media screen and (max-width:500px){
-          .locations{
-            font-size:0.5rem;
-            span {
-              &:first-child {
-                margin-left: 30px;
-              }
-              
-        
-            }
-          }
-        }
-
-        @media screen and (max-width:360px){
-          .locations{
-         
-            span {
-       
-              &:first-child {
-                margin-left: 15px;
-              }
-              
-        
             }
           }
         }
       }
     }
-}
+  }

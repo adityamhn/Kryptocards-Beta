@@ -17,25 +17,9 @@ export const TierSection = () => {
             <span id="main-heading">select your tier</span>
 
             <div id="cards-section">
-                <Link to="/coming-soon">
-                    <div id="bronze-card-area" className="card-area">
-                        <img src={card} className="card-styling" id="bronze-card" />
+     
 
-
-                        <img className="torch-styling" src={bronzeTorch} />
-                    </div>
-                </Link>
-
-                <Link to="/coming-soon">
-                    <div id="platinum-card-area" className="card-area">
-                        <img src={card} className="card-styling" id="platinum-card" />
-
-                        {/* <div className="card-text">
-                for the selected few, made with extreme precision and love
-            </div> */}
-                        <img className="torch-styling" src={platinumTorch} />
-                    </div>
-                </Link>
+        
                 <Link to="/coming-soon">
                     <div id="gold-card-area" className="card-area">
                         <img id="gold-card" className="card-styling" src={card} />
@@ -46,16 +30,19 @@ export const TierSection = () => {
                         <img className="torch-styling" src={goldTorch} />
                     </div>
                 </Link>
+
                 <Link to="/coming-soon">
                     <div id="silver-card-area" className="card-area">
                         <img id="silver-card" className="card-styling" src={card} />
 
                         {/* <div className="card-text">
-                a touch of silver in your cards collection
+                for the taste of high life
             </div> */}
                         <img className="torch-styling" src={silverTorch} />
                     </div>
                 </Link>
+                
+           
 
             </div>
         </div>
