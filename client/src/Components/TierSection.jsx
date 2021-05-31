@@ -1,6 +1,7 @@
 import React from 'react'
 import './TierSection.scss';
 import card from '../images/final.svg';
+import card2 from '../images/diamond_dark_svg.svg';
 //  import card from "../assets/golden_card.png";
 import silverTorch from '../assets/Torches/silver-torch.svg'
 import bronzeTorch from '../assets/Torches/bronze-torch.svg'
@@ -22,7 +23,7 @@ export const TierSection = () => {
         
                 <Link to="/coming-soon">
                     <div id="gold-card-area" className="card-area">
-                        <img id="gold-card" className="card-styling" src={card} />
+                        <img id="gold-card" className="card-styling" src={card2} />
 
                         {/* <div className="card-text">
                 for the taste of high life
