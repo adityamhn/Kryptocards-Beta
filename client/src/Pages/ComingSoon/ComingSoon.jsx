@@ -12,7 +12,7 @@ export const ComingSoon = () => {
     return (
 
         <div id="coming-soon-text-main-div">
-            <div className="container">
+            <div className="container-coming-soon">
                 <Link to="/">
                 <div class="glitch" data-text="COMING SOON">COMING SOON</div>
                 <div class="glow">COMING SOON</div>
