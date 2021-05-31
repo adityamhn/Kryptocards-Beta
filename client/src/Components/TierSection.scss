@@ -21,25 +21,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
-
-        // @keyframes gold-card-hover {
-        //     from {
-        //         transform: translateY(0);
-        //         filter: drop-shadow(8px 8px  100px rgba(255, 215, 0, 0.30));
-
-        //     }
-
-        //     50% {
-        //         transform: translateY(-40px);
-        //         filter: drop-shadow(8px 8px  100px rgba(255, 215, 0, 0.45));
-        //     }
-
-        //     to {
-        //         transform: translateY(0);
-        //         filter: drop-shadow(8px 8px  100px rgba(255, 215, 0, 0.30));
-        //     }
-        // }
-
+ 
         @keyframes gold-card-hover {
             from {
                 opacity: 0.2;
@@ -97,57 +79,10 @@
         };
 
                        
+ 
+ 
 
-        @keyframes bronze-card-hover {
-            from {
-                transform: translateY(0);
-                filter: drop-shadow(8px 8px 100px rgba(205, 127, 50, 0.30));
-
-            }
-
-            50% {
-                transform: translateY(-40px);
-                filter: drop-shadow(8px 8px 100px rgba(205, 127, 50, 0.45));
-            }
-
-            to {
-                transform: translateY(0);
-                filter: drop-shadow(8px 8px 100px rgba(205, 127, 50, 0.30));
-            }
-        }
-
-        @keyframes platinum-card-hover {
-            from {
-                transform: translateY(0);
-                filter: drop-shadow(8px 8px 100px rgba(202, 202, 202, 0.30));
-            }
-
-            50% {
-                transform: translateY(-40px);
-                filter: drop-shadow(8px 8px 100px rgba(202, 202, 202, 0.45));
-            }
-
-            to {
-                transform: translateY(0);
-                filter: drop-shadow(8px 8px 100px rgba(202, 202, 202, 0.30));
-            }
-        }
-
-
-        #bronze-card-area:hover>#bronze-card {
-            animation: bronze-card-hover 1.4s ease-in-out infinite;
-
-        }
-
-        #platinum-card-area:hover>#platinum-card {
-            animation: platinum-card-hover 1.4s ease-in-out infinite;
-
-        }
-
-        // #gold-card-area:hover>#gold-card {
-        //     animation: gold-card-hover 1.4s ease-in-out infinite;
-
-        // }
+ 
 
         #gold-card-area:hover>#gold-card {
             animation: gold-card-hover 1.4s ease-in-out forwards;
@@ -159,23 +94,6 @@
             animation: silver-card-hover 1.4s ease-in-out forwards;
 
         }
-
-
-
-
-        // @keyframes torch-animation {
-        //     from {
-        //         opacity: .6;
-        //     }
-
-        //     50% {
-        //         opacity: 1;
-        //     }
-
-        //     to {
-        //         opacity: .6;
-        //     }
-        // }
 
         @keyframes torch-animation {
             from {
@@ -237,18 +155,12 @@
 
             }
 
-            #platinum-card {
-                filter: drop-shadow(8px 8px 100px rgba(202, 202, 202, 0.30));
-
-            }
+         
 
             #silver-card {
                 animation: silver-card-hover-reverse 1.4s ease-in-out forwards;
             }
-
-            #bronze-card {
-                filter: drop-shadow(8px 8px 100px rgba(205, 127, 50, 0.30));
-            }
+ 
 
         }
 

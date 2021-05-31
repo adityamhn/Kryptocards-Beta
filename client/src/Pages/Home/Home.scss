@@ -8,9 +8,8 @@
    
 
     .layer {
-        background: url(../../assets/backgrounds/landing-page-main-background.png) no-repeat;
-        background-position:90% 50%;
-        background-size: 140% 150%;
+        background: url(../../assets/backgrounds/landing-page-main-background.png) no-repeat center center fixed;
+        background-size: cover;
         // position: absolute;
         // width: 70vw;
     }

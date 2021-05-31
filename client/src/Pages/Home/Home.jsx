@@ -22,7 +22,7 @@ export const Home = () => {
             <div className="layer">
             <Hero/>
             <WhatWeDo/>
-            <TierSection/>
+      
             </div>
             
         </div>

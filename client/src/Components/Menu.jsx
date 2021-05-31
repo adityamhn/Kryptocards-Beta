@@ -82,7 +82,7 @@ const Menu = ({state}) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/coming-soon'>
+                      to='/tiers'>
                       Explore
                     </Link>
                   </li>

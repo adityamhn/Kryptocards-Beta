@@ -23,7 +23,7 @@ export const TierSection = () => {
         
                 <Link to="/coming-soon">
                     <div id="gold-card-area" className="card-area">
-                        <img id="gold-card" className="card-styling" src={card2} />
+                        <img id="gold-card" className="card-styling" src={card} />
 
                         {/* <div className="card-text">
                 for the taste of high life
@@ -34,7 +34,7 @@ export const TierSection = () => {
 
                 <Link to="/coming-soon">
                     <div id="silver-card-area" className="card-area">
-                        <img id="silver-card" className="card-styling" src={card} />
+                        <img id="silver-card" className="card-styling" src={card2} />
 
                         {/* <div className="card-text">
                 for the taste of high life
