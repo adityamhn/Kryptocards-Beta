@@ -1,18 +1,9 @@
 #tier-section-main-div {
-    width: 100%;
+    width:100%;
     font-family: "Spartan", sans-serif;
 
     text-align: center;
 
-    #main-heading {
-
-        margin: 2rem 0;
-        color: white;
-        font-size: 3.5rem;
-        font-weight: medium;
-        text-transform: uppercase;
-
-    }
 
     #cards-section {
         cursor: pointer;
@@ -24,7 +15,7 @@
  
         @keyframes gold-card-hover {
             from {
-                opacity: 0.2;
+                opacity: 0.3;
                 filter: drop-shadow(2px 2px 100px rgba(255, 215, 0, 0.30));
 
             }
@@ -43,7 +34,7 @@
             }
 
             to {
-                opacity: 0.2;
+                opacity: 0.3;
 
                 filter: drop-shadow(2px 2px 100px rgba(255, 215, 0, 0.30));
             }
@@ -51,7 +42,7 @@
 
         @keyframes silver-card-hover {
             from {
-                opacity: 0.2;
+                opacity: 0.3;
                 filter: drop-shadow(8px 8px 100px rgba(229, 228, 226, 0.30));
 
             }
@@ -72,7 +63,7 @@
 
 
             to {
-                opacity: 0.2;
+                opacity: 0.3;
                 filter: drop-shadow(8px 8px 100px rgba(229, 228, 226, 0.30));
                 
             }
@@ -82,7 +73,7 @@
  
  
 
- 
+        
 
         #gold-card-area:hover>#gold-card {
             animation: gold-card-hover 1.4s ease-in-out forwards;
@@ -90,14 +81,16 @@
         }
 
 
-        #silver-card-area:hover>#silver-card {
+        #silver-card-area:hover>#silver-card ,#bronze-card-area:hover>#bronze-card
+        ,#platinum-card-area:hover>#platinum-card{
             animation: silver-card-hover 1.4s ease-in-out forwards;
 
         }
 
+        
         @keyframes torch-animation {
             from {
-                opacity: .2;
+                opacity: .3;
             }
 
             to {
@@ -111,7 +104,7 @@
             }
 
             to {
-                opacity: .2;
+                opacity: .3;
             }
         }
 
@@ -119,11 +112,13 @@
             animation: torch-animation 1.4s ease-in-out forwards;
         }
 
-
+        #gold-card-area,#platinum-card-area{
+            margin-top:180px;
+        }
 
 
         .card-area {
-            margin: 2rem;
+            margin: 2.3rem;
             max-width: 240px;
             display: flex;
             flex-direction: column;
@@ -157,7 +152,7 @@
 
          
 
-            #silver-card {
+            #silver-card,#bronze-card,#platinum-card {
                 animation: silver-card-hover-reverse 1.4s ease-in-out forwards;
             }
  

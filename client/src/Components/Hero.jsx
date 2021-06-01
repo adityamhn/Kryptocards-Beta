@@ -3,24 +3,15 @@ import { Container, Image } from 'react-bootstrap'
 import './Hero.scss'
 import finalLogo from '../images/finalLogo.svg'
 import Navbar from '../Components/Navbar'
-import {MdNavigateNext,MdNavigateBefore} from 'react-icons/md'
+import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import madar_uchiha from '../images/madar_uchiha.gif'
 import madara from '../images/madara.svg'
 import lelouch from '../images/lelouch.svg'
-import {store} from '../app/store';
-import {changeLogoSign} from '../features/NavbarLogo/NavbarLogoSlice';
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/swiper.scss";
-// import "swiper/components/navigation/navigation.scss";
-
-
-
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+ import {store} from '../app/store';
+ import {showNavbar,changeLogoSign} from '../features/NavbarLogo/NavbarLogoSlice';
 
 export const Hero = () => {
-    const [rotate,setRotate] = useState(0)
-    
+
     const [slides, setSlides] = useState([lelouch, madara, lelouch]);
 
 
@@ -29,6 +20,8 @@ export const Hero = () => {
     const timeout = useRef(null)
 
     useEffect(() => {
+        store.dispatch(showNavbar({show:true}));
+        store.dispatch(changeLogoSign({value:"LOGO"}));
         const nextSlide = () => {
             setCurrent(current => (current === length - 1 ? 0 : current + 1))
         }
@@ -42,7 +35,6 @@ export const Hero = () => {
         }
     }, [current, length])
 
-    
     const nextSlide = () => {
         if (timeout.current) {
             clearTimeout(timeout.current)
@@ -64,46 +56,47 @@ export const Hero = () => {
         return null;
     }
 
+
     return (
         <>
-    
-        <Container fluid className="hero-cont">
-        <div className="wrapper">
-            
-        <div className="text-sec">
-            <span id="krypto-heading">krypto</span>
-            <span id="cards-heading">cards</span>
-        </div>
-        <div className="details-sec">
-        
-<div className="swiper-sec">
-                        {slides.map((slide, index) => {
+            <Container fluid className="hero-cont">
+                <div className="hero-wrapper">
+                    <div className="title-sec">
+                        <h1 className="title1">KRYPTO</h1>
+                        <h1 className="title2">CARDS</h1>
+
+                    </div>
+                    <div className="swiper-sec">
+                    <div className="fore-ground">
+                    {slides.map((slide, index) => {
                             return (
+                                <>
+
                                 <div className="swiper-card-sec" key={index}>
 
                                     {index === current && (
                                         <>
 
-                                            <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card" />
+                                            <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card inactive-card" />
                                             <Image src={slides[index]} className="card-active swiper-card" />
-                                            <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card" />
+                                            <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card inactive-card" />
                                         </>
 
                                     )}
 
 
                                 </div>
+                                </>
                             )
 
                         })}
+                    </div>
+                        
 
 
                     </div>
-        </div>
-        </div>
-        </Container>
+                </div>
+            </Container>
         </>
     )
 }
-
- 

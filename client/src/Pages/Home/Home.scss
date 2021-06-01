@@ -1,7 +1,5 @@
-
-
+ 
 .background-full {
-    margin-top:-80px;
     padding: 0;
     min-height: 100vh;
     background-color: #050304;
@@ -10,8 +8,27 @@
     .layer {
         background: url(../../assets/backgrounds/landing-page-main-background.png) no-repeat center center fixed;
         background-size: cover;
-        // position: absolute;
-        // width: 70vw;
+        padding: 0;
+
+        @media only screen and (max-width: 1180px) {
+            background-position: -180% 100%;
+         }
+
+         @media only screen and (max-width: 900px) {
+            background-position:50% 115%;
+         }
+
+         @media only screen and (max-width: 500px) {
+            background-position:50% 120%;
+         }
+
+         @media only screen and (max-width: 400px) {
+            background-position:50% 125%;
+         }
+
+         @media only screen and (max-width: 330px) {
+            background-position:50% 130%;
+         }
     }
     
 }

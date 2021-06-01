@@ -23,6 +23,38 @@ const transporter = nodemailer.createTransport({
   });
   
 
+exports.sendUnsubscribeMail = (name,email)=>{
+  var mainOptions = {
+    from: nodeMailerUser,
+    to: email,
+    subject: "Hello from Kryptocards",
+    html: `
+    <h1>Greetings frorm Kryptocards</h1>
+<p>
+<bold>Hello ${name}!</bold>
+You have been added to our newsletter list, thank you for subscribing!
+</p>
+<p>Warm Regards,</p>
+<p>Team Kryptocards</p>
+    `
+  };
+
+  transporter.sendMail(mainOptions, async (err, info) => {
+    if (err) {
+      console.log(err)
+      return res.status(500).send({ message: "ERROR_SENDING_EMAIL" })
+    }
+    else{
+        console.log("Mail sent to " + email);
+    }
+
+  })
+}
+
+
+
+
+
 
 exports.sendEmailToRecipient = (name,email)=>{
     var mainOptions = {

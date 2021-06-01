@@ -1,30 +1,24 @@
-import React,{useEffect} from 'react'
-import {Hero} from '../../Components/Hero';
-import {store} from '../../app/store';
-import {changeLogoSign,
-    showNavbar} from '../../features/NavbarLogo/NavbarLogoSlice';
-import { WhatWeDo } from '../../Components/WhatWeDo';
-import './Home.scss';
-import { TierSection } from '../../Components/TierSection';
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import {Hero} from '../../Components/Hero'
+import './Home.scss'
+
+import {WhatWeDo} from '../../Components/WhatWeDo'
+import Footer from '../../Components/Footer'
+
 
 
 export const Home = () => {
-
-    useEffect(() => {
-        store.dispatch(changeLogoSign({value:"LOGO"}))
-        store.dispatch(showNavbar({show:true}))
-    
-   
-
-    }, [])
     return (
-        <div className="background-full">
-            <div className="layer">
-            <Hero/>
-            <WhatWeDo/>
-      
-            </div>
-            
+        <Container fluid className="background-full">
+ 
+        <div className="layer">
+        <Hero />
+        <WhatWeDo />
+        <Footer />
         </div>
+        </Container>
     )
 }
+
+ 
