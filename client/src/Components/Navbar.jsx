@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import './Navbar.scss'
-import { Button, Container, Form } from 'react-bootstrap'
+import { Button, Container, Image } from 'react-bootstrap'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IoMdClose } from 'react-icons/io'
-
+import finalLogo from '../images/finalLogo.svg'
 import Menu from "./Menu";
 
 const Navbar = ({ history }) => {
@@ -55,28 +55,21 @@ const Navbar = ({ history }) => {
         }, 1200);
     };
 
-    return (<>
+    return (
         <Container fluid className="navbar-cont">
             <div className="wrapper">
                 <div className="inner-header">
-                    <div className="logo">
-                    <Link to='/'>Krypto Cards
+                    <Link to='/'>
+                    <Image src={finalLogo} className="logo" />
                     </Link>
                     </div>
 
                     <div className="menu">
-                        <button disabled={disabled} onClick={handleMenu}>
-                            {state.menuName === "Menu" ? 
-                        <HiMenuAlt4 className="menu-icon" /> : <IoMdClose className="menu-icon" />
-                              }
-                        </button>
+                        <HiMenuAlt4 className="menu-icon" /> 
                     </div>
 
-                </div>
             </div>
         </Container>
-        <Menu state={state} />
-    </>
     )
 }
 

@@ -6,10 +6,29 @@
 
     .layer {
         background: url("../../images/background.svg") no-repeat;
-        background-position:90% 50%;
-        background-size: 140% 150%;
-        position: absolute;
-        width: 70vw;
+        background-position:-180% 95%;
+        background-size: 90% 150%;
+        padding: 0;
+
+        @media only screen and (max-width: 1180px) {
+            background-position: -180% 100%;
+         }
+
+         @media only screen and (max-width: 900px) {
+            background-position:50% 115%;
+         }
+
+         @media only screen and (max-width: 500px) {
+            background-position:50% 120%;
+         }
+
+         @media only screen and (max-width: 400px) {
+            background-position:50% 125%;
+         }
+
+         @media only screen and (max-width: 330px) {
+            background-position:50% 130%;
+         }
     }
     
 }
