@@ -68,6 +68,7 @@ exports.subscribeToNewsletter = async (req, res, next) => {
                 .json({
                     success: true,
                 })
+                Mailer.sendSubscribeMail(email);
             next();
         }
         const newNewsletterEmail = new NewsletterEmail({
