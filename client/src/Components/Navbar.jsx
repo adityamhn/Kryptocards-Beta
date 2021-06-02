@@ -65,10 +65,15 @@ const Navbar = ({ history }) => {
                     </div>
 
                     <div className="menu">
-                        <HiMenuAlt4 className="menu-icon" /> 
+                    <button disabled={disabled} onClick={handleMenu}>
+                            {state.menuName === "Menu" ?
+                                <HiMenuAlt4 className="menu-icon" /> : <IoMdClose className="menu-icon" />
+                            }
+                        </button>
                     </div>
 
             </div>
+            <Menu state={state} />
         </Container>
     )
 }

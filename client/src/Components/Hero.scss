@@ -100,6 +100,11 @@
             @media only screen and (max-width: 900px) {
                 width: 100%;
             }
+
+            
+            @media only screen and (max-height: 700px) {
+            height: 100%;
+            }
         }
 
         .swiper-sec {
@@ -120,6 +125,7 @@
                 align-items: center;
                 transition: all 0.4s linear;
 
+                
                 .swiper-card {
                     width: 15rem;
                     // clip-path: polygon(0% 5%,100% 0%,100% 100%,0% 95%);
@@ -141,6 +147,7 @@
                     transform: translate3d(0, 0, 100);
                     transform: scale(1.2);
                     margin: 0rem 2rem;
+
                 }
             }
         }
