@@ -82,6 +82,26 @@
             }
         }
 
+        .fore-ground {
+            position: absolute;
+            background: linear-gradient(
+                90deg,
+                rgba(5, 3, 4, 1) 0%,
+                rgba(5, 3, 4, 0.95) 5%,
+                rgba(5, 3, 4, 0.2) 30%,
+                rgba(5, 3, 4, 0) 50%,
+                rgba(5, 3, 4, 0.2) 70%,
+                rgba(5, 3, 4, 0.95) 95%,
+                rgba(0, 0, 0, 1) 100%
+            );
+            width: 45%;
+            height: 50%;
+
+            @media only screen and (max-width: 900px) {
+                width: 100%;
+            }
+        }
+
         .swiper-sec {
             display: flex;
             justify-content: center;
@@ -90,27 +110,19 @@
             padding: 2rem;
             overflow: hidden;
 
-          
-            
-    
-         
             @media only screen and (max-width: 900px) {
                 width: 100%;
             }
-
 
             .swiper-card-sec {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 transition: all 0.4s linear;
-                
-            
 
                 .swiper-card {
                     width: 15rem;
-                   
-        
+                    // clip-path: polygon(0% 5%,100% 0%,100% 100%,0% 95%);
 
                     @media only screen and (max-width: 1050px) {
                         width: 13rem;
@@ -130,7 +142,6 @@
                     transform: scale(1.2);
                     margin: 0rem 2rem;
                 }
-                
             }
         }
     }
