@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 
 import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
 import { Home } from './Pages/Home/Home';
+import { Tiers } from './Pages/Tiers/Tiers';
 function App() {
   return (
     <Router >
@@ -16,7 +17,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={ContactUsPage}/>
         <Route exact path="/coming-soon" component={ComingSoon}/>
-
+        <Route exact path="/tiers" component={Tiers}/>
         <Redirect to="/"/>
       </Switch>
     </Router>

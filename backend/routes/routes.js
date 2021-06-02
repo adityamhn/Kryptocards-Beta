@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const MailController = require('../controllers/MailerController');
-
+const NewsletterController = require('../controllers/newsletters.controller');
 
 router.use(function (req, res, next) {
     res.header(
@@ -11,9 +11,11 @@ router.use(function (req, res, next) {
     next()
   })
 
-router.post('/contact-form-submission',MailController.sendContactFormMail)
+router.post('/contact-form-submission',MailController.sendContactFormMail);
 
+router.post('/subscribe-newsletter',NewsletterController.subscribeToNewsletter);
 
+router.get("/unsubscribe-newsletter/:id",NewsletterController.unsubscribeToNewsletter);
 
 
 
