@@ -7,6 +7,7 @@ import './JobsCard.scss'
 
 
 
+
 export const JobsCard = ({ job }) => {
     const { jobTitle, location, shortDesc, longDesc } = job;
 
@@ -26,7 +27,7 @@ export const JobsCard = ({ job }) => {
                     </div>
                     <div className="btns">
                         <Button className="details-btn" onClick={handleShow}>details</Button>
-                        <Button className="apply-btn">Apply</Button>
+               
                     </div>
 
                 </Card.Header>

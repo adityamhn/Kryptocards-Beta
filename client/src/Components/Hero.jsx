@@ -7,8 +7,11 @@ import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import madar_uchiha from '../images/madar_uchiha.gif'
 import madara from '../images/madara.svg'
 import lelouch from '../images/lelouch.svg'
- import {store} from '../app/store';
- import {showNavbar,changeLogoSign} from '../features/NavbarLogo/NavbarLogoSlice';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
 
@@ -20,8 +23,6 @@ export const Hero = () => {
     const timeout = useRef(null)
 
     useEffect(() => {
-        store.dispatch(showNavbar({show:true}));
-        store.dispatch(changeLogoSign({value:"LOGO"}));
         const nextSlide = () => {
             setCurrent(current => (current === length - 1 ? 0 : current + 1))
         }
@@ -67,34 +68,33 @@ export const Hero = () => {
 
                     </div>
                     <div className="swiper-sec">
-                    <div className="fore-ground">
-                    {slides.map((slide, index) => {
+                        <div className="fore-ground" />
+                        {slides.map((slide, index) => {
                             return (
                                 <>
 
-                                <div className="swiper-card-sec" key={index}>
+                                    <div className="swiper-card-sec" key={index}>
 
-                                    {index === current && (
-                                        <>
+                                        {index === current && (
+                                            <>
 
-                                            <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card inactive-card" />
-                                            <Image src={slides[index]} className="card-active swiper-card" />
-                                            <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card inactive-card" />
-                                        </>
+                                                <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card inactive-card" />
+                                                <Image src={slides[index]} className="card-active swiper-card" />
+                                                <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card inactive-card" />
+                                            </>
 
-                                    )}
+                                        )}
 
 
-                                </div>
+                                    </div>
                                 </>
                             )
 
                         })}
                     </div>
-                        
 
 
-                    </div>
+
                 </div>
             </Container>
         </>

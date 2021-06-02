@@ -29,7 +29,7 @@ exports.sendSubscribeMail = (email)=>{
     to: email,
     subject: "Hello from Kryptocards!",
     html: `
-    <h1>Greetings frorm Kryptocards</h1>
+    <h1 style="color:red;">Greetings frorm Kryptocards</h1>
 <p>
 
 You have been added to our newsletter list, thank you for subscribing!
@@ -132,7 +132,7 @@ exports.sendMailToApplicant = (name,email)=>{
         to: teamMailList,
         subject: "Greetings from Kryptocards!",
         html: `
-        <h1>Hello ${name}!</h1>
+        <h1 >Hello ${name}!</h1>
         <b>Your form has been successfully reached us!<b>
         <p>We are currently not hiring right now, but if when we start to,
         we have your details with us and would contact you if your profile matches
