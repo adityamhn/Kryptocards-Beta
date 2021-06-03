@@ -1,5 +1,4 @@
-$red: #00a8a8;
-$black: #191919;
+
 
 .hamburger-menu {
     display: none;
@@ -23,7 +22,7 @@ $black: #191919;
     }
     .menu-layer {
       position: relative;
-      background: $red;
+      background: #050304;
       height: 100%;
       overflow: hidden;
       .menu-city-background {
@@ -64,12 +63,20 @@ $black: #191919;
                 overflow: hidden;
                 position: relative;
                 width: 700px;
+
+                @media only screen and (max-width: 760px) {
+                 font-size: 5rem;
+              }
+              @media only screen and (max-width: 478px) {
+                font-size: 3rem;
+                height: 80px;
+             }
                 a {
                   position: absolute;
                   color: #fff;
                   text-decoration: none;
                   &:hover {
-                    color: $black;
+                    color: #00ffff;
                   }
                 }
               }
@@ -95,6 +102,10 @@ $black: #191919;
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;
+
+          @media only screen and (max-width: 478px) {
+            display: none;
+         }
           span {
             cursor: pointer;
             &:first-child {
@@ -105,7 +116,7 @@ $black: #191919;
             transition: 0.3s ease-in-out;
             &:hover {
               color: #fff;
-              background: $black;
+              background: #050304;
               padding: 8px 24px;
               border-radius: 4px;
             }
