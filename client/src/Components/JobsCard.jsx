@@ -49,7 +49,11 @@ export const JobsCard = ({ job }) => {
     const handleShow = () => setShow(true);
 
 
+
+
     const onFormSubmit = (values) => {
+        console.log(values);
+        console.log(CV);
         const formData = new FormData();
         formData.append('name', values.name);
         formData.append('phone', values.phone);
@@ -68,7 +72,11 @@ export const JobsCard = ({ job }) => {
     }
 
     const onCVChange = (e) => {
+        
         const file = e.target.files[0];
+        if (!file){
+            return;
+        }
         if (file.size > 5 * 1024 * 1024) {
             alert("File size shoudn't exceed 5mb!");
             return;
@@ -86,7 +94,7 @@ export const JobsCard = ({ job }) => {
                         <div className="location"><HiOutlineLocationMarker className="icon" /> {location}</div>
                     </div>
                     <div className="btns">
-                        <Button className="details-btn" onClick={handleShow}>details</Button>
+                        <Button className="details-btn" onClick={handleShow}>Details</Button>
 
                     </div>
 
@@ -178,7 +186,7 @@ export const JobsCard = ({ job }) => {
                                                     </Form.Group>
                                                     <Form.Group as={Col} className="group">
                                                         <Form.Label className="label">CV</Form.Label>
-                                                        <Form.Control type="file" accept="application/pdf" className="field" />
+                                                        <Form.Control onChange={onCVChange} type="file" accept="application/pdf" className="field" />
                                                     </Form.Group>
                                                 </Row>
                                                 <Form.Group className="group">
@@ -194,7 +202,12 @@ export const JobsCard = ({ job }) => {
                                                     </Form.Control.Feedback>
                                                 </Form.Group>
                                                 <Form.Group className="submit-group">
-                                                    <Button className="submit-btn">Submit</Button>
+                                                    <Button onClick={(e) => {
+                                    e.preventDefault();
+
+                                    handleSubmit();
+                                }} 
+                                className="submit-btn">Submit</Button>
                                                 </Form.Group>
                                             </Form>
                                         )
