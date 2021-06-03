@@ -1,168 +1,152 @@
+#coming-soon-text-main-div{
  
-  #coming-soon-text-main-div{
     
-      width:100vw;
-      height:100vh;
-      background: url(../../assets/backgrounds/contact-form-background.png) no-repeat center fixed;
-      background-size: cover;
-      overflow:hidden;
-    .container {
-        font-family: "Spartan", sans-serif;
-        font-style: italic;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 40%;
-        left: 50%;
+  width:100vw;
+  height:100vh;
+  background: url(../../assets/backgrounds/contact-form-background.png) no-repeat center fixed;
+  background-size: cover;
+  overflow:hidden;
 
 
-        .glitch {
-            color: #00ffff;
-            position: relative;
-            font-size: 8vw;
-            // margin: 70px 200px;
-            animation: glitch 5s 5s infinite;
-          }
-          
-          .glitch::before {
-            content: attr(data-text);
-            position: absolute;
-            left: -2px;
-            text-shadow: -5px 0 rgb(0, 255, 242);
-            
-            overflow: hidden;
-            top: 0;
-            animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
-          }
-          
-          .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 2px;
-            text-shadow: -5px 0  	#3e3c41;
-            overflow: hidden;
-            top: 0;
-            animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
-          }
-        
-
-        .glow {
-            @extend .glitch;
-            text-shadow: 0 0 1000px rgb(191, 223, 223);
-            color: transparent;
-            position: absolute;
-            top: 0;
-          }
-          
-          .subtitle {
-              
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 100;
-            font-size: 1.2vw;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1em;
-            text-align: center;
-            position: absolute;
-            left: 17%;
-            animation: glitch-2 5s 5.02s infinite;
-          }
+  .container-coming-soon {
     
-      .scanlines {
-        overflow: hidden;
-        mix-blend-mode: difference;
-      }
-      
-      .scanlines::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        animation: fudge 7s ease-in-out alternate infinite;
-      }
-      #go-home-button{
-        background: none;
-        padding:0.5rem 10rem;
-        color:#00ffff;
-        border: 3px solid #00ffff;
-        position:absolute;
-        bottom:-60%;
-        border-radius:7px;
-        left:17%;
-        transition:0.8s ease-in-out;
-      }
-      
-      #go-home-button:hover{
-         background-color: #00ffff8e;
-         color:white;
+    
+    width:90%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
 
-      }
-      @media screen and (max-width:600px){
-        .glitch{
-          font-size: 9.4vw;
-        }
-        
-        .subtitle{
-          font-size: 1.6vw;
-        }
- 
-      }
-      
-      @keyframes glitch {
-        1%{
-          transform: rotateX(10deg) skewX(90deg);
-        }
-        2%{
-          transform: rotateX(0deg) skewX(0deg);
-        }
-      }
-      
-      @keyframes noise-1 {
-        $steps: 30;
-        @for $i from 1 through $steps {
-          #{percentage($i*(1/$steps))} {
-            $top: random(99);
-            $bottom: random(100 - $top);
-            clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-          }
-        }
-      }
-      
-      @keyframes noise-2 {
-        $steps: 30;
-        @for $i from 0 through $steps {
-          #{percentage($i*(1/$steps))} {
-            $top: random(99);
-            $bottom: random(100 - $top);
-            clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-          }
-        }
-      }
-      
-      
-      @keyframes fudge {
-        from {
-          transform: translate(0px, 0px);
-        }
-        to {
-          transform: translate(0px, 2%);
-        }
-      }
-      
-     
-      
-      @keyframes glitch-2 {
-        1%{
-          transform: rotateX(10deg) skewX(70deg);
-        }
-        2%{
-          transform: rotateX(0deg) skewX(0deg);
-        }
-      }
-      
-      
-      }
-      
+  .glitch {
+    color: #00ffff;
+    position: relative;
+    font-size: 8vw;
+    // margin: 70px 200px;
+    animation: glitch 5s 5s infinite;
   }
   
+  .glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: -5px 0 rgb(0, 225, 255);
+ 
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  }
+  
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -5px 0 rgb(144, 224, 238);
+    
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  }
+  .scanlines {
+    overflow: hidden;
+    mix-blend-mode: difference;
+  }
+  
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  
+    
+  
+    animation: fudge 7s ease-in-out alternate infinite;
+  }
+
+  @media screen and (max-width:600px){
+    .glitch{
+      font-size: 9.4vw;
+    }
+    
+    .subtitle{
+      font-size: 1.6vw;
+    }
+
+  }
+  .glow {
+    @extend .glitch;
+    text-shadow: 0 0 1000px #00ffffa1;
+    color: transparent;
+    position: absolute;
+    top: 0;
+  }
+  
+  .subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: .8vw;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    text-align: center;
+    position: absolute;
+    left: 17%;
+    animation: glitch-2 5s 5.02s infinite;
+  } 
+  
+  }
+ 
+}
+
+
+  
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1 {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+
+@keyframes glitch-2 {
+  1%{
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}

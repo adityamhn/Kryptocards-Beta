@@ -71,7 +71,7 @@ const Menu = ({state}) => {
         <div
           ref={el => (cityBackground = el)}
           className='menu-city-background'></div>
-        <div className='container'>
+        <div className='container-menu'>
           <div className='wrapper'>
             <div className='menu-links'>
               <nav>
@@ -82,7 +82,7 @@ const Menu = ({state}) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/coming-soon'>
+                      to='/tiers'>
                       Explore
                     </Link>
                   </li>

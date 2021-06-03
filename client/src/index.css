@@ -19,3 +19,8 @@ code {
   font-family: "Spartan";
   src: url(./fonts/Spartan-Regular.ttf);
 }
+
+@font-face {
+  font-family: "Cinzel";
+  src: url(./fonts/Cinzel-Regular.ttf);
+}
