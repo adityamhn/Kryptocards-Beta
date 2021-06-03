@@ -11,19 +11,19 @@
       }
 
       .cls-3 {
-        fill: #fcc201;
+        fill: #7ac943;
       }
     </style>
     <linearGradient id="linear-gradient" x1="934.98" y1="628.22" x2="939.51" y2="932.61" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="0.13" stop-color="#fff" stop-opacity="0.03"/>
-      <stop offset="0.32" stop-color="#fff" stop-opacity="0.2"/>
-      <stop offset="0.53" stop-color="#fffbc8" stop-opacity="0.5"/>
-      <stop offset="0.8" stop-color="#fff59e"/>
-      <stop offset="1" stop-color="#fff157"/>
+      <stop offset="0.18" stop-color="#fff" stop-opacity="0.03"/>
+      <stop offset="0.37" stop-color="#d1ffd5" stop-opacity="0.2"/>
+      <stop offset="0.58" stop-color="#b4ffb2" stop-opacity="0.5"/>
+      <stop offset="0.8" stop-color="#98ff98"/>
+      <stop offset="1" stop-color="#79f58a"/>
     </linearGradient>
   </defs>
-  <title>golden_torch_svg</title>
+  <title>emerald_torch</title>
   <path class="cls-1" d="M1332.5,646l-182,248.38h0c-8.08,5.56-102,30.94-215.07,33.3-109.3,2.28-206.74-22.34-216.08-29.57L538,646Z" transform="translate(-538 -646)"/>
   <g class="cls-2">
     <ellipse class="cls-3" cx="935.47" cy="895.6" rx="215.36" ry="31.98" transform="translate(-546.61 -636.92) rotate(-0.55)"/>

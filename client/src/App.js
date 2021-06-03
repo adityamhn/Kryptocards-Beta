@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar';
 import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
 import { Home } from './Pages/Home/Home';
 import { Tiers } from './Pages/Tiers/Tiers';
+import { Jobs } from './Pages/Jobs/Jobs';
 function App() {
   return (
     <Router >
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/contact" component={ContactUsPage}/>
         <Route exact path="/coming-soon" component={ComingSoon}/>
         <Route exact path="/tiers" component={Tiers}/>
+        <Route exact path="/jobs" component={Jobs}/>
         <Redirect to="/"/>
       </Switch>
     </Router>

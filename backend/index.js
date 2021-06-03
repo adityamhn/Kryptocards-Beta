@@ -78,7 +78,7 @@ mongoose
     })
 
     app.use('/api', require('./routes/routes'));
-
+    app.use('/public',express.static('public'));
   })
   .catch((err) => {
     console.log(err)

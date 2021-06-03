@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import {store} from '../../app/store'
-import { showNavbar } from '../../features/NavbarLogo/NavbarLogoSlice';
+import { changeNavbarMode } from '../../features/NavbarLogo/NavbarLogoSlice';
 import {TierSection} from '../../Components/TierSection';
 import './Tiers.scss';
 
@@ -8,12 +8,15 @@ import './Tiers.scss';
 export const Tiers = () => {
 
 
-    useEffect(()=>{
+    
 
-        store.dispatch(showNavbar({show:false}));
+        useEffect(()=>{
+            store.dispatch(changeNavbarMode({value:"LOGO",show:true}))
+    
+        },[])
 
 
-    },[])
+    
 
     return (
         <div id="tiers-page-main-div">

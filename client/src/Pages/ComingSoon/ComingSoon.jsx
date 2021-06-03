@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { store } from '../../app/store'
 import './ComingSoon.scss';
-import { showNavbar } from '../../features/NavbarLogo/NavbarLogoSlice';
+import { changeNavbarMode } from '../../features/NavbarLogo/NavbarLogoSlice';
 import { Link } from 'react-router-dom';
 export const ComingSoon = () => {
     useEffect(() => {
 
-        store.dispatch(showNavbar({ show: false }))
+        store.dispatch(changeNavbarMode({ show: false,value:null }))
 
     }, [])
     return (
