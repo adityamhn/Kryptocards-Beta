@@ -11,16 +11,16 @@
       }
 
       .cls-3 {
-        fill: #7cffff;
+        fill: #3fa9f5;
       }
     </style>
     <linearGradient id="linear-gradient" x1="934.98" y1="628.22" x2="939.51" y2="932.61" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="0.18" stop-color="#fff" stop-opacity="0.03"/>
-      <stop offset="0.37" stop-color="#fcfcff" stop-opacity="0.2"/>
-      <stop offset="0.58" stop-color="#dff7fa" stop-opacity="0.5"/>
-      <stop offset="0.8" stop-color="#c2e0f9"/>
-      <stop offset="1" stop-color="#abd1f3"/>
+      <stop offset="0.17" stop-color="#fff" stop-opacity="0.03"/>
+      <stop offset="0.37" stop-color="#97ebf4" stop-opacity="0.2"/>
+      <stop offset="0.6" stop-color="#7ae5f5" stop-opacity="0.5"/>
+      <stop offset="0.8" stop-color="#65ddef"/>
+      <stop offset="1" stop-color="#35d6ed"/>
     </linearGradient>
   </defs>
   <title>diamond_torch</title>
