@@ -68,18 +68,21 @@ exports.subscribeToNewsletter = async (req, res, next) => {
                 .json({
                     success: true,
                 })
+                await  Mailer.sendSubscribeMail(email);
             next();
+            return;
         }
         const newNewsletterEmail = new NewsletterEmail({
             email: email
         });
         newNewsletterEmail.save()
-            .then(res => {
+            .then(async (response) => {
                 console.log(`${email} added to list!!)`);
                 res.status(200)
                     .json({
                         success: true,
                     })
+                   await Mailer.sendSubscribeMail(email);
                 next();
 
             })

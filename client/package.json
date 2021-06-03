@@ -21,6 +21,7 @@
     "react-scripts": "4.0.3",
     "react-text-fun": "^1.0.0",
     "react-tilt": "^0.1.4",
+    "swiper": "^6.7.0",
     "yup": "^0.32.9"
   },
   "scripts": {
