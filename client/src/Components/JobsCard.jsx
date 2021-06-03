@@ -190,7 +190,7 @@ export const JobsCard = ({ job }) => {
                                                     </Form.Group>
                                                 </Row>
                                                 <Form.Group className="group">
-                                                    <Form.Label className="label">Any Extra Message</Form.Label>
+                                                    <Form.Label className="label">Message (if any)</Form.Label>
                                                     <Form.Control as="textarea" className="textarea"
                                                         name="message"
                                                         onChange={handleChange}

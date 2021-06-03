@@ -1,20 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Container, Image } from 'react-bootstrap'
 import './Hero.scss'
-import finalLogo from '../images/finalLogo.svg'
-import Navbar from '../Components/Navbar'
-import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
-import madar_uchiha from '../images/madar_uchiha.gif'
-import madara from '../images/madara.svg'
-import lelouch from '../images/lelouch.svg'
+
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+ 
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
+import { BACKEND_URL } from '../constants';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
-
+    const madara = BACKEND_URL + '/public/images/madara.svg'
+    const lelouch = BACKEND_URL + '/public/images/lelouch.svg'
     const [slides, setSlides] = useState([lelouch, madara, lelouch]);
 
 

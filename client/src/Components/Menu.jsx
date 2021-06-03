@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import './Menu.scss'
-import spiderman from "../images/fiction.jpg";
-import basketball from "../images/basketball.jpg";
-import football from "../images/football.jpg";
-import konoha from "../images/anime.jpg";
+import {BACKEND_URL} from '../constants';
+
+
+
 import {
     staggerText,
     staggerReveal,
@@ -18,10 +18,10 @@ import {
   } from "./Animations";
 
 const cities = [
-  { name: "Basketball", image: basketball },
-  { name: "Football", image: football },
-  { name: "Anime", image: konoha },
-  { name: "Fiction", image: spiderman }
+  { name: "Basketball", image: BACKEND_URL + "/public/images/fiction.jpg" },
+  { name: "Football", image: BACKEND_URL + "/public/images/basketball.jpg" },
+  { name: "Anime", image: BACKEND_URL + "/public/images/football.jpg" },
+  { name: "Fiction", image: BACKEND_URL + "/public/images/anime.jpg" }
 ];
 
 

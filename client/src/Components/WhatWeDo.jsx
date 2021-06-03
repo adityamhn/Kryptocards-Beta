@@ -1,8 +1,9 @@
 import React from 'react'
 import './WhatWeDo.scss';
-import testImage from '../assets/test-card.png'
+import {BACKEND_URL} from '../constants';
 
 export const WhatWeDo = () => {
+    const testImage = BACKEND_URL +'/public/assets/test-card.png';
     const returnSix = ()=>{
         const result = [];
         for (let i=0;i<6;i++)result.push(testImage);

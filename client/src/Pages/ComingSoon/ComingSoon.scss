@@ -3,7 +3,7 @@
     
   width:100vw;
   height:100vh;
-  background: url(../../assets/backgrounds/contact-form-background.png) no-repeat center fixed;
+  background: url(http://localhost:8080/public/assets/backgrounds/contact-form-background.png) no-repeat center fixed;
   background-size: cover;
   overflow:hidden;
 
@@ -85,7 +85,8 @@
   .subtitle {
 
     font-weight: 100;
-    font-size: .8vw;
+    font-size: 1.2vw;
+  
     color: white;
     text-transform: uppercase;
     letter-spacing: 1em;
