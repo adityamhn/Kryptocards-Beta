@@ -76,14 +76,14 @@
         
 
         #gold-card-area:hover>#gold-card {
-            animation: gold-card-hover 1.4s ease-in-out forwards;
+            animation: gold-card-hover 0.7s ease-in-out forwards;
 
         }
 
 
         #silver-card-area:hover>#silver-card ,#bronze-card-area:hover>#bronze-card
         ,#platinum-card-area:hover>#platinum-card{
-            animation: silver-card-hover 1.4s ease-in-out forwards;
+            animation: silver-card-hover 0.7s ease-in-out forwards;
 
         }
 
@@ -109,7 +109,7 @@
         }
 
         .card-area:hover>.torch-styling {
-            animation: torch-animation 1.4s ease-in-out forwards;
+            animation: torch-animation 0.7s ease-in-out forwards;
         }
 
         #gold-card-area,#platinum-card-area{
@@ -130,8 +130,8 @@
             }
 
             .torch-styling {
-                animation: torch-animation-reverse 1.4s ease-in-out forwards;
-
+                animation: torch-animation-reverse 0.3s ease-in-out forwards;
+                width:20vw;
             }
 
             .card-text {
@@ -146,14 +146,14 @@
 
 
             #gold-card {
-                animation: gold-card-hover-reverse 1.4s ease-in-out forwards;
+                animation: gold-card-hover-reverse 0.3s ease-in-out forwards;
 
             }
 
          
 
             #silver-card,#bronze-card,#platinum-card {
-                animation: silver-card-hover-reverse 1.4s ease-in-out forwards;
+                animation: silver-card-hover-reverse 0.3s ease-in-out forwards;
             }
  
 

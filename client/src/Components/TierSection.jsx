@@ -6,7 +6,7 @@ import sapphireCard from '../assets/cards/sapphire.svg';
 //  import card from "../assets/golden_card.png";
 import silverTorch from '../assets/Torches/silver-torch.svg'
 import bronzeTorch from '../assets/Torches/bronze-torch.svg'
-import goldTorch from '../assets/Torches/gold-torch.svg'
+import goldTorch from '../assets/Torches/golden_torch_svg.svg'
  
 import { Link } from 'react-router-dom';
 
