@@ -24,3 +24,7 @@ code {
   font-family: "Cinzel";
   src: url(./fonts/Cinzel-Regular.ttf);
 }
+@font-face{
+  font-family:"Bodonixt";
+  src : url(./fonts/bodonixt.ttf);
+}
