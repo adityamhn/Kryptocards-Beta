@@ -6,10 +6,10 @@
     display:flex;
     flex-direction:column;
     align-items: center;
-
+    
     #main-heading {
         width:100%;
-
+        font-family:'Bodonixt';
         flex:1;
         margin: 2rem 0;
         color: white;
@@ -20,6 +20,8 @@
         align-items: flex-end;
         justify-content: center;
         #color-secondary{
+            padding:0 20px;
+            font-family:'Bodonixt';
             color:#00ffff;
         }
     }

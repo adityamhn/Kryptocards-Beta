@@ -16,58 +16,116 @@
         @keyframes gold-card-hover {
             from {
                 opacity: 0.6;
-                filter: drop-shadow(2px 2px 100px rgba(255, 215, 0, 0.30));
+                filter: drop-shadow(2px 2px 20px rgb(255, 217, 0));
 
             }
 
             to {
                 opacity: 1;
-                filter: drop-shadow(2px 2px 200px rgba(255, 215, 0, 0.5));
+                filter: drop-shadow(2px 2px 200px rgb(255, 217, 0));
             }
         }
 
         @keyframes gold-card-hover-reverse {
             from {
                 opacity: 1;
-                filter: drop-shadow(2px 2px 200px rgba(255, 215, 0, 0.5));
+                filter: drop-shadow(2px 2px 200px rgb(255, 217, 0));
 
             }
 
             to {
                 opacity: 0.6;
 
-                filter: drop-shadow(2px 2px 100px rgba(255, 215, 0, 0.30));
+                filter: drop-shadow(2px 2px 20px rgb(255, 217, 0));
             }
         }
 
-        @keyframes silver-card-hover {
+        @keyframes diamond-card-hover {
             from {
                 opacity: 0.6;
-                filter: drop-shadow(8px 8px 100px rgba(229, 228, 226, 0.30));
+                filter: drop-shadow(2px 2px 20px rgb(255,255,255));
 
             }
 
 
             to {
                 opacity: 1;
-                filter: drop-shadow(8px 8px 200px rgba(229, 228, 226, 0.5));
+                filter: drop-shadow(2px 2px 200px rgb(255, 255, 255));
             }
         };
 
-        @keyframes silver-card-hover-reverse {
+        @keyframes diamond-card-hover-reverse {
             from {
                 opacity: 1;
-                filter: drop-shadow(8px 8px 200px rgba(229, 228, 226, 0.5));
+                filter: drop-shadow(2px 2px 200px rgb(255, 255, 255));
 
             }
 
 
             to {
                 opacity: 0.6;
-                filter: drop-shadow(8px 8px 100px rgba(229, 228, 226, 0.30));
+                filter: drop-shadow(2px 2px 20px rgb(255, 255, 255));
                 
             }
         };
+        @keyframes emerald-card-hover {
+            from {
+                opacity: 0.6;
+                filter: drop-shadow(2px 2px 20px rgb(60, 204, 91));
+
+            }
+
+
+            to {
+                opacity: 1;
+                filter: drop-shadow(2px 2px 200px rgb(60, 204, 91));
+            }
+        };
+
+        @keyframes emerald-card-hover-reverse {
+            from {
+                opacity: 1;
+                filter: drop-shadow(2px 2px 200px rgb(60, 204, 91));
+
+            }
+
+
+            to {
+                opacity: 0.6;
+                filter: drop-shadow(2px 2px 20px rgb(60, 204, 91));
+                
+            }
+        };
+
+        @keyframes sapphire-card-hover {
+            from {
+                opacity: 0.6;
+                filter: drop-shadow(2px 2px 20px rgb(46, 120, 231));
+
+            }
+
+
+            to {
+                opacity: 1;
+                filter: drop-shadow(2px 2px 200px rgb(46, 120, 231));
+            }
+        };
+
+        @keyframes sapphire-card-hover-reverse {
+            from {
+                opacity: 1;
+                filter: drop-shadow(2px 2px 200px rgb(46, 120, 231));
+
+            }
+
+
+            to {
+                opacity: 0.6;
+                filter: drop-shadow(2px 2px 20px rgb(46, 120, 231));
+                
+            }
+        };
+
 
                        
  
@@ -79,11 +137,15 @@
             animation: gold-card-hover .6s ease-in-out forwards;
 
         }
-
-
-        #silver-card-area:hover>#silver-card ,#bronze-card-area:hover>#bronze-card
-        ,#platinum-card-area:hover>#platinum-card{
-            animation: silver-card-hover .6s ease-in-out forwards;
+        #diamond-card-area:hover>#diamond-card {
+            animation: diamond-card-hover .6s ease-in-out forwards;
+        }
+        #emerald-card-area:hover>#emerald-card{
+            animation: emerald-card-hover .6s ease-in-out forwards;
+        }
+         
+        #sapphire-card-area:hover>#sapphire-card{
+            animation: sapphire-card-hover .6s ease-in-out forwards;
 
         }
 
@@ -112,7 +174,7 @@
             animation: torch-animation .6s ease-in-out forwards;
         }
 
-        #gold-card-area,#platinum-card-area{
+        #gold-card-area,#sapphire-card-area{
             margin-top:180px;
         }
 
@@ -150,11 +212,19 @@
 
             }
 
-         
-
-            #silver-card,#bronze-card,#platinum-card {
-                animation: silver-card-hover-reverse .2s ease-in-out forwards;
+            #diamond-card{
+                animation: diamond-card-hover-reverse .2s ease-in-out forwards;
             }
+            #emerald-card{
+                animation: emerald-card-hover-reverse .2s ease-in-out forwards;
+            }
+            #sapphire-card {
+                animation: sapphire-card-hover-reverse .2s ease-in-out forwards;
+            }
+            // #bronze-card{
+            //     transform:scale(0.85
+            //     );
+            // }
  
 
         }

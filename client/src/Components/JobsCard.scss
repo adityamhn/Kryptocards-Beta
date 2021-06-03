@@ -10,8 +10,10 @@
     .jobs-card-header {
         border: none;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+
 
         .head {
             .job-title {
@@ -37,7 +39,7 @@
             .details-btn {
                 border: 2px solid #fff;
                 background: transparent;
-                border-radius: 30px;
+                border-radius: 20px;
                 padding: 0.2rem 1.1rem;
                 margin: 0rem 0.4rem;
                 box-shadow: none;
@@ -48,23 +50,37 @@
                 }
             }
 
-            .apply-btn {
-                border: 2px solid #00ffff;
-                background: transparent;
-                border-radius: 30px;
-                padding: 0.2rem 0.9rem;
-                color: #00ffff;
-                margin: 0rem 0.4rem;
-                box-shadow: none;
+                
 
-                &:hover {
-                    background: #00ffff;
-                    color: #000;
+
+        }
+    }
+    @media screen and (max-width:550px){
+        .jobs-card-header{
+            flex-direction:column;
+            .btns{
+                margin:10px 0;
+            }
+            .head{
+                .job-title{
+                    font-size:1.2rem;
                 }
             }
         }
     }
-
+    @media screen and (max-width:300px){
+        .jobs-card-header{
+            flex-direction:column;
+            align-items: center;
+            
+            .head{
+                .job-title{
+                    font-size:0.8rem;
+                }
+            }
+        }
+    }
+    
     .jobs-card-body {
         padding: 1rem 1.5rem 0.5rem 1.5rem;
 
@@ -110,6 +126,16 @@
                 font-size: 3rem;
 
             }
+            @media  screen and (max-width:350px) {
+                .title{
+                    font-size:2rem;
+                }
+            }
+            @media  screen and (max-width:280px) {
+                .title{
+                    font-size:1.2rem;
+                }
+            }
 
             .location {
                 color: #fff;
@@ -154,6 +180,17 @@
                 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
                }
            }
+           @media screen and (max-width:1000px){
+               .back-icon{
+                   font-size:5rem;
+               }
+           }
+           @media screen and (max-width:600px){
+            .back-icon{
+                left: -2%;
+                font-size:3.5rem;
+            }
+        }
            .job-form {
             padding: 2rem 0rem 1rem 0rem;
             width: 95%;

@@ -13,7 +13,7 @@ export const WhatWeDo = () => {
     return (
         <div id="what-we-do-main-div">
             <div id="what-we-do-heading">
-                What Do We Do <span id="question-mark">?</span>
+                What <span id="question-mark">We</span>  Do 
             </div>
             <div id="what-we-do-content">
                 <div id="cards-section">

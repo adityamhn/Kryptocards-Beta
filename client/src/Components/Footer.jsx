@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container,Button, FormControl, FormLabel, InputGroup, Form } from 'react-bootstrap'
+import { Container,Button, FormControl, FormLabel, InputGroup, Form,Row } from 'react-bootstrap'
 import './Footer.scss'
 import * as yup from 'yup';
 import {Formik} from 'formik';
@@ -51,7 +51,9 @@ const Footer = () => {
                         return (
             <Form  className="form-sec">
             <Form.Label className="heading">GET OUR LATEST <span className="other-color">UPDATES</span></Form.Label>
-            <InputGroup>
+            <div className="row">
+                        <Form.Group>
+
                         <FormControl
                          name="email"
                          onChange={handleChange}
@@ -61,7 +63,9 @@ const Footer = () => {
                             <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
                                             {touched.email ? errors.email : null}
                                         </Form.Control.Feedback>
-                        <InputGroup.Append>
+                    
+                        </Form.Group>
+                    
                             <Button
                             onClick={(e) => {
                                 e.preventDefault();
@@ -70,16 +74,21 @@ const Footer = () => {
                             }}
                             
                             className="submit-btn">Subscribe</Button>
-                        </InputGroup.Append>
-                    </InputGroup>
+                   
+                    </div>
             </Form>
                           )
                         }}
                 </Formik>
             </div>
             <hr className="separator" />
-            <div id="footer-bottom-portion">
-                        
+            <div className="footer-bottom-portion">
+                <div className="heading-portion">
+                        KRYPTO <div className="title2">CARDS</div> 
+                </div>
+                <div className="terms-portion">
+                        All Rights Reserved
+                </div>
             </div>
         </div>
 

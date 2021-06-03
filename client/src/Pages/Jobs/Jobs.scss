@@ -22,9 +22,26 @@
                 color: #fff;
                 font-weight: normal;
                 text-align: center;
+                
 
                 .other-color {
                     color: #00ffff;
+                }
+                
+            }
+            @media screen and (max-width:600px){
+                .title{
+                    font-size:3.5rem;
+                }
+            }
+            @media screen and (max-width:450px){
+                .title{
+                    font-size:2rem;
+                }
+            }
+            @media screen and (max-width:250px){
+                .title{
+                    font-size:1.3rem;
                 }
             }
         }

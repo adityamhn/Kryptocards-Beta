@@ -27,14 +27,18 @@ exports.sendSubscribeMail = (email)=>{
   var mainOptions = {
     from: nodeMailerUser,
     to: email,
-    subject: "Hello from Kryptocards!",
+    subject: "You are now subscribed!",
     html: `
-    <h1 style="color:red;">Greetings frorm Kryptocards</h1>
-<p>
+    Dear XYZ,
 
-You have been added to our newsletter list, thank you for subscribing!
-</p>
-<p>Warm Regards,</p>
+<p>You have now successfully subscribed to Krypto Cards Newsletter.</p>
+
+<p>For any queries, please write to <a href="mailto:kryptocards@gmail.com">kryptocards@gmail.com</a> </p>
+
+<p>Thank you for showing your interest into Krypto Cards.</p>
+
+<p style="font-weight:bold;">Stay safe. Stay healthy</p>
+
 <p>Team Kryptocards</p>
     `
   };
@@ -59,16 +63,19 @@ exports.sendEmailToRecipient = (name,email)=>{
     var mainOptions = {
         from: nodeMailerUser,
         to: email,
-        subject: "Hello from Kryptocards",
+        subject: "Thank you for contacting us! - Krypto Cards",
         html: `
-        <h1>Greetings frorm Kryptocards</h1>
-    <p>
-    <bold>Hello ${name}!</bold>
-    We have recieved your contact request and would reach out to you
-    as soon as possible.
-    </p>
-    <p>Warm Regards,</p>
-    <p>Team Kryptocards</p>
+        <h1>Dear ${name}</h1>,
+
+  <p>We have received your contact request and your message. We will shortly go through it and will definitely get back to you.<p>
+
+<p>For any queries, please write to <a href="mailto:kryptocards@gmail.com">kryptocards@gmail.com</a> <p>
+
+<p>Thank you for showing your interest into Krypto Cards.</p>
+
+<p style="font-weight:bold;">Stay safe. Stay healthy</p>
+
+<p>Team Kryptocards</p>
         `
       };
 
@@ -94,7 +101,7 @@ exports.sendEmailToTeam = ({name,email,phoneNumber,message})=>{
     var mainOptions = {
 
         from: nodeMailerUser,
-        to: teamMailList,
+        to: 'kryptocards@gmail.com',
         subject: "You got a new contact request!",
         html: `
         <h1>Yo Bitch</h1>
@@ -129,14 +136,20 @@ exports.sendMailToApplicant = (name,email)=>{
     var mainOptions = {
 
         from: nodeMailerUser,
-        to: teamMailList,
+        to: email,
         subject: "Greetings from Kryptocards!",
         html: `
-        <h1 >Hello ${name}!</h1>
-        <b>Your form has been successfully reached us!<b>
-        <p>We are currently not hiring right now, but if when we start to,
-        we have your details with us and would contact you if your profile matches
-        what we are looking for, thank you!<p>
+        Dear ${name},
+
+        <p>Thank you for applying for the position of "ABC". We have received your application and will review it. Currently we are not hiring, but the position is still vacant and we will be contacting you for the interview after reviewing your application.</p>
+        
+        <p>For any queries, please write to kryptocards@gmail.com </p>
+        
+        <p>Thank you for showing your interest into Krypto Cards.</p>
+        
+        <p style="font-weight:bold">Stay safe. Stay healthy</p>
+        
+        <p>Team Kryptocards</p>
         `
       };
 
@@ -160,7 +173,7 @@ exports.sendApplicationEmailToTeam = ({name,email,position,phone,message})=>{
   var mainOptions = {
 
     from: nodeMailerUser,
-    to: teamMailList,
+    to: 'kryptocards@gmail.com',
     subject: "You got a new contact request!",
     html: `
     <h1>Yo Bitch</h1>

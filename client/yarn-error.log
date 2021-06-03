@@ -1,0 +1,76 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add tilt.js
+
+PATH: 
+  /Users/kunalbhatia/.rvm/gems/ruby-2.6.3/bin:/Users/kunalbhatia/.rvm/gems/ruby-2.6.3@global/bin:/Users/kunalbhatia/.rvm/rubies/ruby-2.6.3/bin:/usr/local/opt/gettext/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/usr/local/mysql/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/kunalbhatia/.rvm/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.13.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/kunalbhatia/package.json: Unexpected token / in JSON at position 184
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@reduxjs/toolkit": "^1.5.1",
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.5.0",
+      "@testing-library/user-event": "^7.2.1",
+      "axios": "^0.21.1",
+      "bootstrap": "^5.0.1",
+      "formik": "^2.2.8",
+      "gsap": "^3.6.1",
+      "node-sass": "^6.0.0",
+      "react": "^17.0.2",
+      "react-bootstrap": "^1.6.0",
+      "react-dom": "^17.0.2",
+      "react-icons": "^4.2.0",
+      "react-redux": "^7.2.4",
+      "react-router-dom": "^5.2.0",
+      "react-scripts": "4.0.3",
+      "react-text-fun": "^1.0.0",
+      "yup": "^0.32.9"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
