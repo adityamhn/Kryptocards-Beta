@@ -44,7 +44,7 @@ const upload = multer({
 });
 
 
-router.post('/upload-application',upload.single("CV"),ApplicationController.submitApplication);
+router.post('/submit-application',upload.single("CV"),ApplicationController.submitApplication);
 
 
 module.exports = router;

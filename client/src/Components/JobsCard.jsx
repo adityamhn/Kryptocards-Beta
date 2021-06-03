@@ -4,8 +4,41 @@ import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { IoArrowBackOutline } from 'react-icons/io5'
 import { MdClose } from 'react-icons/md'
 import './JobsCard.scss'
+import { Formik, yupToFormErrors } from 'formik';
+import * as yup from 'yup';
+import { SubmitApplication } from '../services/applicants.service'
 
 
+
+const validationSchema = yup.object().shape({
+    name: yup.string("Wrong field field!").
+        required("This is a required field!")
+        .strict(),
+    phone: yup.
+        string()
+        .matches(/^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/, "Invalid format")
+        .required("This is  required field!")
+        .strict(),
+    email: yup.string().email("Wrong email format!")
+        .required("This is a required field!")
+        .strict(),
+    position: yup.string('Wrong field format!')
+        .required('This is a required field!')
+        .strict(),
+    message: yup.string('Wrong field format!').strict()
+
+
+})
+
+const formInitialValues = {
+    name: '',
+    phone: '',
+    email: '',
+    position: '',
+    message: ''
+
+
+}
 
 
 export const JobsCard = ({ job }) => {
@@ -13,9 +46,38 @@ export const JobsCard = ({ job }) => {
 
     const [show, setShow] = useState(false);
     const [formView, setFormView] = useState(false)
-
+    const [CV, setCV] = useState(null);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+    const onFormSubmit = (values) => {
+        const formData = new FormData();
+        formData.append('name', values.name);
+        formData.append('phone', values.phone);
+        formData.append('email', values.email);
+        formData.append('position', values.position);
+        formData.append('message', values.message);
+        formData.append('CV', CV);
+        SubmitApplication(formData)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
+
+    }
+
+    const onCVChange = (e) => {
+        const file = e.target.files[0];
+        if (file.size > 5 * 1024 * 1024) {
+            alert("File size shoudn't exceed 5mb!");
+            return;
+        }
+        setCV(file);
+    }
+
 
     return (
         <>
@@ -27,7 +89,7 @@ export const JobsCard = ({ job }) => {
                     </div>
                     <div className="btns">
                         <Button className="details-btn" onClick={handleShow}>details</Button>
-               
+
                     </div>
 
                 </Card.Header>
@@ -38,11 +100,11 @@ export const JobsCard = ({ job }) => {
                 </Card.Body>
             </Card>
             <Modal className="job-modal" size="lg" show={show} onHide={handleClose} centered>
-            <div className="close-btn-cont">
-            {!formView ?<MdClose className="close-btn" onClick={() => {
-                handleClose()
-                setFormView(false)
-            }} /> : null}</div>
+                <div className="close-btn-cont">
+                    {!formView ? <MdClose className="close-btn" onClick={() => {
+                        handleClose()
+                        setFormView(false)
+                    }} /> : null}</div>
 
                 <Modal.Body className="modal-body">
 
