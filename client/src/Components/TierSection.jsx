@@ -3,7 +3,7 @@ import './TierSection.scss';
 import goldCard from '../assets/cards/gold.svg';
 import diamondCard from '../assets/cards/diamond.svg';
 import sapphireCard from '../assets/cards/sapphire.svg';
-import emeraldCard from '../assets/cards/emerald.svg';
+import emeraldCard from '../assets/cards/Group 55-1.svg';
 import diamondTorch from '../assets/Torches/diamond_torch.svg'
 import silverTorch from '../assets/Torches/sapphire_torch.svg'
 import goldTorch from '../assets/Torches/golde_torch.svg'
