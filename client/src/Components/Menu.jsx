@@ -101,7 +101,7 @@ const Menu = ({state}) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
                       to='/jobs'>
-Jobs
+                      Jobs
                     </Link>
                   </li>
                 </ul>
