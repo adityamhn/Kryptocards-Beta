@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
 
   },
   filename: function (req, file, cb) {
-      if (file.mimetype !== 'file/pdf') {
+      if (file.mimetype !== 'application/pdf') {
           var err = new Error();
           err.code = 'filetype';
           return cb(err);
