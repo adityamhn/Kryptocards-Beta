@@ -22,9 +22,7 @@ const validationSchema = yup.object().shape({
     email: yup.string().email("Wrong email format!")
         .required("This is a required field!")
         .strict(),
-    position: yup.string('Wrong field format!')
-        .required('This is a required field!')
-        .strict(),
+
     message: yup.string('Wrong field format!').strict()
 
 
@@ -34,7 +32,7 @@ const formInitialValues = {
     name: '',
     phone: '',
     email: '',
-    position: '',
+
     message: ''
 
 
@@ -51,12 +49,16 @@ export const JobsCard = ({ job }) => {
     const handleShow = () => setShow(true);
 
 
+
+
     const onFormSubmit = (values) => {
+        console.log(values);
+        console.log(CV);
         const formData = new FormData();
         formData.append('name', values.name);
         formData.append('phone', values.phone);
         formData.append('email', values.email);
-        formData.append('position', values.position);
+        formData.append('position', jobTitle);
         formData.append('message', values.message);
         formData.append('CV', CV);
         SubmitApplication(formData)
@@ -70,7 +72,11 @@ export const JobsCard = ({ job }) => {
     }
 
     const onCVChange = (e) => {
+        
         const file = e.target.files[0];
+        if (!file){
+            return;
+        }
         if (file.size > 5 * 1024 * 1024) {
             alert("File size shoudn't exceed 5mb!");
             return;
@@ -88,7 +94,7 @@ export const JobsCard = ({ job }) => {
                         <div className="location"><HiOutlineLocationMarker className="icon" /> {location}</div>
                     </div>
                     <div className="btns">
-                        <Button className="details-btn" onClick={handleShow}>details</Button>
+                        <Button className="details-btn" onClick={handleShow}>Details</Button>
 
                     </div>
 
@@ -126,35 +132,87 @@ export const JobsCard = ({ job }) => {
                         </div>
                         <div className="job-form-body">
                             <IoArrowBackOutline className="back-icon" onClick={() => setFormView(false)} />
-                            <Form className="job-form">
-                                <Row>
-                                    <Form.Group as={Col} className="group">
-                                        <Form.Label className="label">First Name</Form.Label>
-                                        <Form.Control className="field" />
-                                    </Form.Group>
-                                    <Form.Group as={Col} className="group">
-                                        <Form.Label className="label">Last Name</Form.Label>
-                                        <Form.Control className="field" />
-                                    </Form.Group>
-                                </Row>
-                                <Row>
-                                    <Form.Group as={Col} className="group">
-                                        <Form.Label className="label">Email</Form.Label>
-                                        <Form.Control className="field" />
-                                    </Form.Group>
-                                    <Form.Group as={Col} className="group">
-                                        <Form.Label className="label">Phone Number</Form.Label>
-                                        <Form.Control className="field" />
-                                    </Form.Group>
-                                </Row>
-                                <Form.Group className="group">
-                                    <Form.Label className="label">Why you want this job?</Form.Label>
-                                    <Form.Control as="textarea" className="textarea" />
-                                </Form.Group>
-                                <Form.Group className="submit-group">
-                                    <Button className="submit-btn">Submit</Button>
-                                </Form.Group>
-                            </Form>
+                            <Formik
+                                initialValues={formInitialValues}
+                                validationSchema={validationSchema}
+                                onSubmit={(values) => {
+
+                                    onFormSubmit(values);
+                                }}
+                            >
+                                {
+                                    ({ handleChange, handleBlur, handleSubmit, values, touched, errors }) => {
+
+                                        return (
+                                            <Form className="job-form">
+                                                <Row>
+                                                    <Form.Group as={Col} className="group">
+                                                        <Form.Label className="label">Name <span className="asterisk">*</span> </Form.Label>
+                                                        <Form.Control className="field"
+                                                            name="name"
+                                                            onChange={handleChange}
+                                                            onBlur={handleBlur}
+                                                            isInvalid={errors.name}
+                                                        />
+                                                        <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
+                                                            {touched.name ? errors.name : null}
+                                                        </Form.Control.Feedback>
+                                                    </Form.Group>
+                                                    <Form.Group as={Col} className="group">
+                                                        <Form.Label className="label">Email <span className="asterisk">*</span> </Form.Label>
+                                                        <Form.Control className="field"
+                                                            name="email"
+                                                            onChange={handleChange}
+                                                            onBlur={handleBlur}
+                                                            isInvalid={errors.email} />
+                                                        <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
+                                                            {touched.email ? errors.email : null}
+                                                        </Form.Control.Feedback>
+                                                    </Form.Group>
+                                                </Row>
+                                                <Row>
+
+                                                    <Form.Group as={Col} className="group">
+                                                        <Form.Label className="label">Phone Number <span className="asterisk">*</span> </Form.Label>
+                                                        <Form.Control className="field"
+                                                            name="phone"
+                                                            onChange={handleChange}
+                                                            onBlur={handleBlur}
+                                                            isInvalid={errors.phone}
+                                                        />
+                                                        <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
+                                                            {touched.phone ? errors.phone : null}
+                                                        </Form.Control.Feedback>
+                                                    </Form.Group>
+                                                    <Form.Group as={Col} className="group">
+                                                        <Form.Label className="label">CV</Form.Label>
+                                                        <Form.Control onChange={onCVChange} type="file" accept="application/pdf" className="field" />
+                                                    </Form.Group>
+                                                </Row>
+                                                <Form.Group className="group">
+                                                    <Form.Label className="label">Any Extra Message</Form.Label>
+                                                    <Form.Control as="textarea" className="textarea"
+                                                        name="message"
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                        isInvalid={errors.message}
+                                                    />
+                                                    <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
+                                                        {touched.message ? errors.message : null}
+                                                    </Form.Control.Feedback>
+                                                </Form.Group>
+                                                <Form.Group className="submit-group">
+                                                    <Button onClick={(e) => {
+                                    e.preventDefault();
+
+                                    handleSubmit();
+                                }} 
+                                className="submit-btn">Submit</Button>
+                                                </Form.Group>
+                                            </Form>
+                                        )
+                                    }}
+                            </Formik>
                         </div>
 
                     </>}

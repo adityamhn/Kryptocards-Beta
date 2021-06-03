@@ -161,12 +161,24 @@
             .group {
                 padding-top: 0.7rem;
                 padding-bottom: 0.7rem;
+                
                 .label {
                     color: #fff;
+                }
+                .field{
+                    background:none;
+                    color:white;
+                    border-radius:7px;
                 }
 
                 .textarea {
                     min-height: 110px;
+                    background:none;
+                    color:white;
+                    border-radius:7px;
+                }
+                .asterisk{
+                    color:red;
                 }
 
               
