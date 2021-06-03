@@ -4,9 +4,8 @@ import goldCard from '../assets/cards/gold.svg';
 import diamondCard from '../assets/cards/diamond.svg';
 import sapphireCard from '../assets/cards/sapphire.svg';
 //  import card from "../assets/golden_card.png";
-import silverTorch from '../assets/Torches/silver-torch.svg'
-import bronzeTorch from '../assets/Torches/bronze-torch.svg'
-import goldTorch from '../assets/Torches/gold-torch.svg'
+import silverTorch from '../assets/Torches/diamond_torch.svg'
+import goldTorch from '../assets/Torches/golde_torch.svg'
  
 import { Link } from 'react-router-dom';
 
