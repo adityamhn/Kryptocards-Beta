@@ -51,5 +51,10 @@
          background-color: #00ffff;
          border-radius: 10px;   
         }
+
+        #footer-bottom-portion{
+            display:flex;
+            flex-direction:row;
+        }
     }
 }

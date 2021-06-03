@@ -78,6 +78,9 @@ const Footer = () => {
                 </Formik>
             </div>
             <hr className="separator" />
+            <div id="footer-bottom-portion">
+                        
+            </div>
         </div>
 
         </Container>

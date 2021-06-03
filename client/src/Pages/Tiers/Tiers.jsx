@@ -20,7 +20,7 @@ export const Tiers = () => {
 
     return (
         <div id="tiers-page-main-div">
-                 <div id="main-heading">select your tier</div>
+                 <div id="main-heading">our<span id="color-secondary">tiers</span></div>
 
             <div id="cards-section">
             <TierSection/>
