@@ -12,9 +12,9 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 export const Hero = () => {
     const madara = BACKEND_URL + '/public/images/madara.svg'
     const lelouch = BACKEND_URL + '/public/images/lelouch.svg'
-    const [slides, setSlides] = useState([lelouch, madara, lelouch]);
-
-
+    
+    
+    const [slides, setSlides] = useState([madara,lelouch]);
     const [current, setCurrent] = useState(0);
     const length = slides.length
     const timeout = useRef(null)
