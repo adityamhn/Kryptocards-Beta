@@ -15,20 +15,6 @@ code {
     monospace;
 }
 
-@font-face {
-  font-family: "Spartan";
-  src: url(./fonts/Spartan-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: local('Poppins'), url('./fonts/Poppins-Regular.ttf') ;
-}
- 
-@font-face {
-  font-family: "Cinzel";
-  src: url(./fonts/Cinzel-Regular.ttf);
-}
 @font-face{
   font-family:"Bodonixt";
   src : url(./fonts/Orbitron-Light.ttf);
