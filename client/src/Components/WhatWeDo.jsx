@@ -30,7 +30,14 @@ export const WhatWeDo = () => {
                 }
                 </div>
                 <div id="text-section">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid quo asperiores perferendis, dolorem reprehenderit quos alias ipsa eos vero et qui quisquam, provident molestias id quaerat voluptas ipsam itaque? Sequi?
+                Krypto Cards puts on display or collectible cards in the form of NFTs for you to buy. 
+                We are revolutionising the legacy of collecting physical cards into a digital one which will 
+                awaken the fan within you. We cover various categories from sports to anime. There is something 
+                for everyone. Set your ETH wallet up*; explore our website and our tiers, and find what excites you. 
+                NFTs are Non-fungible tokens or digital assets which we put on the Ethereum BlockChain. To read more, 
+                click here(link to etherium website).
+                To counteract the harmful impact of mining, we plant 1000 trees for each Emerald Tier Card purchase. Look at our card tiers here (link)
+                *Coming Soon
                 </div>
 
             </div>
