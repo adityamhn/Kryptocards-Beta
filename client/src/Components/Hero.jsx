@@ -7,6 +7,7 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import { BACKEND_URL } from '../constants';
+import { showMessage } from '../util/util';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
@@ -54,6 +55,7 @@ export const Hero = () => {
         return null;
     }
 
+   
 
     return (
         <>

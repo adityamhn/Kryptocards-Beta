@@ -1,5 +1,7 @@
+
+
 #what-we-do-main-div{
-    font-family:"Bodonixt";
+    font-family:"Reformation";
     height:100%;
     max-width: 100vw;
     display:flex;
@@ -12,7 +14,7 @@
         padding: 0 8rem;
         
         width:100%;
-        font-family:"Bodonixt";
+        font-family:"Reformation";
         color:white;
         display:flex;
         align-items: flex-end;
@@ -22,9 +24,11 @@
         text-transform: uppercase;
         #question-mark{
             padding:0 9px;
-            font-family:"Bodonixt";
+            font-family:"Reformation";
             color:#00ffff;
         }
+        
+
     }
     @media screen and (max-width:1200px) {
         #what-we-do-heading{
@@ -54,10 +58,11 @@
 
         #cards-section{
             
-       
+        
             display:flex;
             flex-direction:row;
             flex-wrap: wrap;
+            // padding-bottom:40px;
             flex:1;
             .card-styling{
                 margin:0 2rem;
@@ -67,12 +72,14 @@
         }
 
         #text-section{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family:"Reformation";
+            padding-top:2.5rem;
             flex:1;
             color:white;
             font-size:1.4rem;
+            .color-primary{
+                color:#00ffff;
+            }
         }
     }
 

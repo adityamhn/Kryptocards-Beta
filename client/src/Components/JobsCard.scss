@@ -37,9 +37,10 @@
 
         .btns {
             .details-btn {
+                font-family: "Naville";
                 border: 2px solid #fff;
                 background: transparent;
-                border-radius: 20px;
+                border-radius: 10px;
                 padding: 0.2rem 1.1rem;
                 margin: 0rem 0.4rem;
                 box-shadow: none;
@@ -200,8 +201,10 @@
                 padding-bottom: 0.7rem;
                 
                 .label {
+                    font-family: "Naville";
                     color: #fff;
                 }
+                
                 .field{
                     background:none;
                     color:white;
@@ -227,6 +230,7 @@
                 padding-top:2rem ;
 
                 .submit-btn {
+                    font-family: "Naville";
                     background-color: #fff;
                     border:2px solid #fff;
                     color: #000;
@@ -253,6 +257,7 @@
             justify-content: center;
             border: none;
             .apply-btn {
+                font-family: "Naville";
                 background-color: #fff;
                 border:2px solid #fff;
                 color: #000;

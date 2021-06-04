@@ -16,6 +16,200 @@ code {
 }
 
 @font-face{
-  font-family:"Bodonixt";
+  font-family:"Reformation";
   src : url(./fonts/reformation\ sans\ regular.ttf);
+
+}
+@font-face{
+  font-family:"Naville";
+  src : url(./fonts/Naville-Regular\ DEMO.ttf);
+  font-weight: bold;  
+}
+
+.cancel-button-styling-common{
+  font-family: "Naville" !important;
+  border:none !important;
+
+  background:none !important;
+  transition:0.4s ease-in-out !important;
+}
+
+.cancel-button-styling-common:hover{
+  color:#050304 !important;
+}
+.modal-container-styling-common{
+  background-color:rgba(0,0,0,0.7) !important;
+}
+ 
+
+
+.modal-popup-styling-common{
+  background-color:rgb(27, 27, 27) !important;
+  border-radius:15px !important;
+}
+
+
+
+
+
+.cancel-button-styling{
+  border:2px solid #00ffff !important;
+  color:#00ffff !important;
+
+}
+
+.cancel-button-styling:hover{
+
+  background-color:#00ffff !important;
+
+}
+ 
+.modal-title-styling{
+  color:white !important;
+}
+
+
+.modal-popup-styling{
+  color:white !important;
+
+  border:4px solid #00ffff !important;
+
+}
+
+
+
+
+
+ 
+
+.gold-cancel-button-styling{
+ 
+  color:rgb(255, 217, 0) !important;
+ 
+  border:2px solid rgb(255, 217, 0) !important;
+ 
+ 
+}
+
+
+.gold-cancel-button-styling:hover{
+ 
+  background-color:rgb(255, 217, 0)!important;
+
+}
+ 
+
+.gold-modal-text-styling{
+  color:rgb(255, 217, 0)!important;
+}
+
+
+.gold-modal-popup-styling{
+  color:rgb(255, 217, 0) !important;
+ 
+  border:4px solid rgb(255, 217, 0)!important;
+ 
+}
+ 
+
+
+
+
+.sapphire-cancel-button-styling{
+ 
+  color:rgb(46, 120, 231) !important;
+ 
+  border:2px solid rgb(46, 120, 231) !important;
+ 
+ 
+}
+
+
+.sapphire-cancel-button-styling:hover{
+ 
+  background-color:rgb(46, 120, 231)!important;
+
+} 
+ 
+
+.sapphire-modal-text-styling{
+  color:rgb(46, 120, 231)!important;
+}
+
+
+.sapphire-modal-popup-styling{
+  color:rgb(46, 120, 231) !important;
+ 
+  border:4px solid rgb(46, 120, 231)!important;
+ 
+}
+
+
+
+
+
+
+.diamond-cancel-button-styling{
+ 
+  color:rgb(255,255,255) !important;
+ 
+  border:2px solid rgb(255,255,255) !important;
+ 
+ 
+}
+
+
+.diamond-cancel-button-styling:hover{
+ 
+  background-color:rgb(255,255,255)!important;
+
+} 
+ 
+
+.diamond-modal-text-styling{
+  color:rgb(255,255,255)!important;
+}
+
+
+.diamond-modal-popup-styling{
+  color:rgb(255,255,255)!important;
+ 
+  border:4px solid rgb(255,255,255) !important;
+ 
+}
+
+
+
+
+
+
+
+
+.emerald-cancel-button-styling{
+ 
+  color:rgb(60, 204, 91) !important;
+ 
+  border:2px solid rgb(60, 204, 91) !important;
+ 
+ 
+}
+
+
+.emerald-cancel-button-styling:hover{
+ 
+  background-color:rgb(60, 204, 91)!important;
+
+} 
+ 
+
+.emerald-modal-text-styling{
+  color:rgb(60, 204, 91)!important;
+}
+
+
+.emerald-modal-popup-styling{
+  color:rgb(60, 204, 91)!important;
+ 
+  border:4px solid rgb(60, 204, 91) !important;
+ 
 }
