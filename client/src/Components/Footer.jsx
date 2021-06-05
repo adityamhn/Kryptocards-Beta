@@ -4,7 +4,7 @@ import './Footer.scss'
 import * as yup from 'yup';
 import {Formik} from 'formik';
 import { SubscribeToNewsletter } from '../services/newsletter.service';
-
+import {showFormMessage} from '../util/util';
 const validationSchema = yup.object().shape({
     email: yup.string().email("Wrong email format!")
         .required("This is a required field!")
@@ -20,14 +20,15 @@ const formInitialValues = {
 
 
 const Footer = () => {
-    
     const onFormSubmit = (values)=>{
+        
         SubscribeToNewsletter(values)
         .then(response=>{
-            console.log(response);
+            showFormMessage("You Have Successfully! Subscribed!",'success');  
         })
         .catch(err=>{
             console.log(err.message);
+            showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
         })
 
     }

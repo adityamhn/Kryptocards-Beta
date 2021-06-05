@@ -7,14 +7,15 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import { BACKEND_URL } from '../constants';
+import { showMessage } from '../util/util';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
     const madara = BACKEND_URL + '/public/images/madara.svg'
     const lelouch = BACKEND_URL + '/public/images/lelouch.svg'
-    const [slides, setSlides] = useState([lelouch, madara, lelouch]);
-
-
+    
+    
+    const [slides, setSlides] = useState([madara,lelouch]);
     const [current, setCurrent] = useState(0);
     const length = slides.length
     const timeout = useRef(null)
@@ -54,6 +55,7 @@ export const Hero = () => {
         return null;
     }
 
+   
 
     return (
         <>

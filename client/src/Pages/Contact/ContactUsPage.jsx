@@ -6,7 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import {SubmitContactForm} from '../../services/contact.service';
-
+import {showFormMessage} from '../../util/util' 
 
 const validationSchema = yup.object().shape({
     name: yup.string()
@@ -38,11 +38,15 @@ const formInitialValues = {
 }
 
 const onFormSubmit = async(values) => {
-    
     values.phoneNumber = parseInt(values.phoneNumber);
     console.log(values);
-    await SubmitContactForm(values);
-    values.phoneNumber = (values.phoneNumber).toString();
+     SubmitContactForm(values).then(response=>{
+        showFormMessage("Thank You For Contacting Us!",'success');   
+        
+     }).catch(err=>{
+        showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
+     })
+     values.phoneNumber = (values.phoneNumber).toString();
 }
 
 

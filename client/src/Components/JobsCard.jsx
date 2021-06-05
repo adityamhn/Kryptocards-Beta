@@ -7,7 +7,7 @@ import './JobsCard.scss'
 import { Formik, yupToFormErrors } from 'formik';
 import * as yup from 'yup';
 import { SubmitApplication } from '../services/applicants.service'
-
+import {showFormMessage} from '../util/util';
 
 
 const validationSchema = yup.object().shape({
@@ -64,11 +64,13 @@ export const JobsCard = ({ job }) => {
         SubmitApplication(formData)
             .then(response => {
                 console.log(response);
+                showFormMessage("Thank You For Your Application, We Will Reach Out To You Soon!",'success')
             })
             .catch(err => {
                 console.log(err.message);
+                showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
             })
-
+        
     }
 
     const onCVChange = (e) => {

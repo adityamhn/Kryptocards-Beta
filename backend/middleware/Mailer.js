@@ -29,7 +29,7 @@ exports.sendSubscribeMail = (email)=>{
     to: email,
     subject: "You are now subscribed!",
     html: `
-    Dear XYZ,
+    <h1>Greetings from Krypto Cards!</h1>
 
 <p>You have now successfully subscribed to Krypto Cards Newsletter.</p>
 
