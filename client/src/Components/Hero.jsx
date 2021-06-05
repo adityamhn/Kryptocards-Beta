@@ -7,11 +7,7 @@ import { MdNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import madar_uchiha from '../images/madar_uchiha.gif'
 import madara from '../images/madara.svg'
 import lelouch from '../images/lelouch.svg'
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import Coverflow from 'react-coverflow';
 
 const Hero = () => {
 
@@ -36,22 +32,22 @@ const Hero = () => {
         }
     }, [current, length])
 
-    const nextSlide = () => {
-        if (timeout.current) {
-            clearTimeout(timeout.current)
-        }
+    // const nextSlide = () => {
+    //     if (timeout.current) {
+    //         clearTimeout(timeout.current)
+    //     }
 
-        setCurrent(current === length - 1 ? 0 : current + 1);
+    //     setCurrent(current === length - 1 ? 0 : current + 1);
 
-    };
+    // };
 
-    const prevSlide = () => {
-        if (timeout.current) {
-            clearTimeout(timeout.current)
-        }
+    // const prevSlide = () => {
+    //     if (timeout.current) {
+    //         clearTimeout(timeout.current)
+    //     }
 
-        setCurrent(current === 0 ? length - 1 : current - 1);
-    }
+    //     setCurrent(current === 0 ? length - 1 : current - 1);
+    // }
 
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null;
@@ -68,8 +64,8 @@ const Hero = () => {
 
                     </div>
                     <div className="swiper-sec">
-                        <div className="fore-ground" />
-                        {slides.map((slide, index) => {
+                        {/* <div className="fore-ground" /> */}
+                        {/* {slides.map((slide, index) => {
                             return (
                                 <>
 
@@ -90,7 +86,32 @@ const Hero = () => {
                                 </>
                             )
 
-                        })}
+                        })} */}
+
+                        <Coverflow
+                            width={960}
+                            height={480}
+                            displayQuantityOfSide={2}
+                            navigation={false}
+                            enableHeading={false}
+                            infiniteScroll
+                            active={current}
+                        >
+
+                            <div
+
+                                role="menuitem"
+                                tabIndex="0"
+                            >
+                                <Image
+                                    src={slides[0]}
+                                    className="swiper-card"
+
+                                />
+                            </div>
+                            <Image src={slides[1]} />
+                            <Image src={slides[2]} />
+                        </Coverflow>
                     </div>
 
 

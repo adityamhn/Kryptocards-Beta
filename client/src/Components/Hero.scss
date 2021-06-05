@@ -119,28 +119,11 @@
                 width: 100%;
             }
 
-            .swiper-card-sec {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: all 0.4s linear;
 
                 
                 .swiper-card {
-                    width: 15rem;
-                    // clip-path: polygon(0% 5%,100% 0%,100% 100%,0% 95%);
-
-                    @media only screen and (max-width: 1050px) {
-                        width: 13rem;
-                    }
-
-                    @media only screen and (max-width: 600px) {
-                        width: 11rem;
-                    }
-
-                    @media only screen and (max-width: 500px) {
-                        width: 9rem;
-                    }
+                    width: 100%;
+                    display: block;
                 }
 
                 .card-active {
@@ -149,7 +132,6 @@
                     margin: 0rem 2rem;
 
                 }
-            }
         }
     }
 }
