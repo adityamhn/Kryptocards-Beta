@@ -5,29 +5,31 @@
   
 
    .layer {
-       background: url(http://localhost:8080/public/images/background.svg) no-repeat;
-       background-position:-180% 95%;
+       background: url(http://localhost:8080/public/images/background.svg) no-repeat fixed;
+       background-position:-180% 40%;
        background-size: 90% 150%;
+       
+
        padding: 0;
 
        @media only screen and (max-width: 1180px) {
-           background-position: -180% 100%;
+           background-position: -180% 40%;
         }
 
         @media only screen and (max-width: 900px) {
-           background-position:50% 115%;
+           background-position:50% 90%;
         }
 
         @media only screen and (max-width: 500px) {
-           background-position:50% 120%;
+           background-position:50% 102%;
         }
 
         @media only screen and (max-width: 400px) {
-           background-position:50% 125%;
+           background-position:50% 102%;
         }
 
         @media only screen and (max-width: 330px) {
-           background-position:50% 130%;
+           background-position:50% 102%;
         }
    }
    

@@ -8,14 +8,15 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import { BACKEND_URL } from '../constants';
 import { showMessage } from '../util/util';
+import Coverflow from 'react-coverflow';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
     const madara = BACKEND_URL + '/public/images/madara.svg'
     const lelouch = BACKEND_URL + '/public/images/lelouch.svg'
+    const peacePain = BACKEND_URL + "/public/images/peace_pain.svg";
     
-    
-    const [slides, setSlides] = useState([madara,lelouch]);
+    const [slides, setSlides] = useState([madara,peacePain,lelouch]);
     const [current, setCurrent] = useState(0);
     const length = slides.length
     const timeout = useRef(null)
@@ -59,43 +60,61 @@ export const Hero = () => {
 
     return (
         <>
-            <Container fluid className="hero-cont">
-                <div className="hero-wrapper">
-                    <div className="title-sec">
-                        <h1 className="title1">KRYPTO</h1>
-                        <h1 className="title2">CARDS</h1>
-
-                    </div>
-                    <div className="swiper-sec">
-                        <div className="fore-ground" />
-                        {slides.map((slide, index) => {
-                            return (
-                                <>
-
-                                    <div className="swiper-card-sec" key={index}>
-
-                                        {index === current && (
-                                            <>
-
-                                                <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card inactive-card" />
-                                                <Image src={slides[index]} className="card-active swiper-card" />
-                                                <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card inactive-card" />
-                                            </>
-
-                                        )}
-
-
-                                    </div>
-                                </>
-                            )
-
-                        })}
-                    </div>
-
-
+        <Container fluid className="hero-cont">
+            <div className="hero-wrapper">
+                <div className="title-sec">
+                    <h1 className="title1">KRYPTO</h1>
+                    <h1 className="title2">CARDS</h1>
 
                 </div>
-            </Container>
-        </>
+                <div className="swiper-sec">
+                    {/* <div className="fore-ground" /> */}
+                    {/* {slides.map((slide, index) => {
+                        return (
+                            <>
+                                <div className="swiper-card-sec" key={index}>
+                                    {index === current && (
+                                        <>
+                                            <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card inactive-card" />
+                                            <Image src={slides[index]} className="card-active swiper-card" />
+                                            <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card inactive-card" />
+                                        </>
+                                    )}
+                                </div>
+                            </>
+                        )
+                    })} */}
+
+                    <Coverflow
+                        width={960}
+                        height={480}
+                        displayQuantityOfSide={2}
+                        navigation={false}
+                        enableHeading={false}
+                        infiniteScroll
+                        active={current}
+                    >
+
+                        <div
+
+                            role="menuitem"
+                            tabIndex="0"
+                        >
+                            <Image
+                                src={slides[0]}
+                                className="swiper-card"
+
+                            />
+                        </div>
+                        <Image src={slides[1]} />
+                        <Image src={slides[2]} />
+                    </Coverflow>
+                </div>
+
+
+
+            </div>
+        </Container>
+    </>
     )
 }
