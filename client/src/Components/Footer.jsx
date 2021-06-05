@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container,Button, FormControl, FormLabel, InputGroup, Form,Row } from 'react-bootstrap'
+import { Container,Button, FormControl, Form } from 'react-bootstrap'
 import './Footer.scss'
 import * as yup from 'yup';
 import {Formik} from 'formik';
@@ -7,7 +7,7 @@ import { SubscribeToNewsletter } from '../services/newsletter.service';
 import {showFormMessage} from '../util/util';
 const validationSchema = yup.object().shape({
     email: yup.string().email("Wrong email format!")
-        .required("This is a required field!")
+        .required("Required Field!")
         .strict(),
 })
 
@@ -52,20 +52,22 @@ const Footer = () => {
                         return (
             <Form  className="form-sec">
             <Form.Label className="heading">GET OUR LATEST <span className="other-color">UPDATES</span></Form.Label>
-            <div className="row">
+            <div className="column">
                         <Form.Group>
-
+                        {/* <div className="form-control-div"> */}
                         <FormControl
                          name="email"
                          onChange={handleChange}
                          onBlur={handleBlur}
                          isInvalid={errors.email}
-                        className="input" placeholder="ENTER YOUR EMAIL" />
+                        className="input-f col" placeholder="ENTER YOUR EMAIL" />
                             <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
                                             {touched.email ? errors.email : null}
                                         </Form.Control.Feedback>
+                        {/* </div> */}
+                 
                     
-                        </Form.Group>
+                        
                     
                             <Button
                             onClick={(e) => {
@@ -73,9 +75,10 @@ const Footer = () => {
 
                                 handleSubmit();
                             }}
+                            // disabled={!errors.email}
                             
-                            className="submit-btn">Subscribe</Button>
-                   
+                            className="submit-btn-f col">Subscribe</Button>
+                     </Form.Group>
                     </div>
             </Form>
                           )
@@ -88,7 +91,7 @@ const Footer = () => {
                         KRYPTO <div className="title2">CARDS</div> 
                 </div>
                 <div className="terms-portion">
-                        All Rights Reserved
+                &copy; All Rights Reserved
                 </div>
             </div>
         </div>
