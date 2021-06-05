@@ -21,10 +21,9 @@
                         color: #00ffff;
                     }
                 }
-                .row{
+                .column{
                     display:flex;
-                    flex-direction: row;
-                    // flex-wrap:nowrap;
+                    flex-direction: column;
 
                 .input-f {
                     
@@ -32,6 +31,9 @@
                     height: 2.5rem;
                     font-weight: bold;  
                     width:30%;
+                }
+                .col{
+                    float: left;
                 }
 
                 .submit-btn-f {
@@ -60,7 +62,7 @@
         .footer-bottom-portion{
             
             display:flex;
-            flex-direction:row;
+            flex-direction:column;
             width:100%;
             color:white;
             .heading-portion{

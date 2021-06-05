@@ -52,7 +52,7 @@ const Footer = () => {
                         return (
             <Form  className="form-sec">
             <Form.Label className="heading">GET OUR LATEST <span className="other-color">UPDATES</span></Form.Label>
-            <div className="row">
+            <div className="column">
                         <Form.Group>
 
                         <FormControl
@@ -60,7 +60,7 @@ const Footer = () => {
                          onChange={handleChange}
                          onBlur={handleBlur}
                          isInvalid={errors.email}
-                        className="input-f" placeholder="ENTER YOUR EMAIL" />
+                        className="input-f col" placeholder="ENTER YOUR EMAIL" />
                             <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
                                             {touched.email ? errors.email : null}
                                         </Form.Control.Feedback>
@@ -74,7 +74,7 @@ const Footer = () => {
                                 handleSubmit();
                             }}
                             
-                            className="submit-btn-f">Subscribe</Button>
+                            className="submit-btn-f col">Subscribe</Button>
                      </Form.Group>
                     </div>
             </Form>
