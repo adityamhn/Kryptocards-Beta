@@ -14,7 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+*{
+  font-family:"Bodonixt";
+}
 @font-face{
   font-family:"Bodonixt";
   src : url(./fonts/reformation\ sans\ regular.ttf);

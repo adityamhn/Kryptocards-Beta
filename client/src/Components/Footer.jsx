@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container,Button, FormControl, FormLabel, InputGroup, Form,Row } from 'react-bootstrap'
+import { Container,Button, FormControl, Form } from 'react-bootstrap'
 import './Footer.scss'
 import * as yup from 'yup';
 import {Formik} from 'formik';
@@ -60,12 +60,12 @@ const Footer = () => {
                          onChange={handleChange}
                          onBlur={handleBlur}
                          isInvalid={errors.email}
-                        className="input" placeholder="ENTER YOUR EMAIL" />
+                        className="input-f" placeholder="ENTER YOUR EMAIL" />
                             <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
                                             {touched.email ? errors.email : null}
                                         </Form.Control.Feedback>
                     
-                        </Form.Group>
+                        
                     
                             <Button
                             onClick={(e) => {
@@ -74,8 +74,8 @@ const Footer = () => {
                                 handleSubmit();
                             }}
                             
-                            className="submit-btn">Subscribe</Button>
-                   
+                            className="submit-btn-f">Subscribe</Button>
+                     </Form.Group>
                     </div>
             </Form>
                           )
@@ -88,7 +88,7 @@ const Footer = () => {
                         KRYPTO <div className="title2">CARDS</div> 
                 </div>
                 <div className="terms-portion">
-                        All Rights Reserved
+                &copy; All Rights Reserved
                 </div>
             </div>
         </div>
