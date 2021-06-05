@@ -24,6 +24,7 @@ const Footer = () => {
         
         SubscribeToNewsletter(values)
         .then(response=>{
+
             showFormMessage("You Have Successfully! Subscribed!",'success');  
         })
         .catch(err=>{
@@ -35,9 +36,12 @@ const Footer = () => {
 
 
     return (
+        
         <Container fluid className="footer-sec-cont">
+            
         <div className="wrapper">
             <div className="header">
+            
             <Formik
                 initialValues={formInitialValues}
                 validationSchema={validationSchema}
@@ -54,7 +58,7 @@ const Footer = () => {
             <Form.Label className="heading">GET OUR LATEST <span className="other-color">UPDATES</span></Form.Label>
             <div className="column">
                         <Form.Group>
-                        {/* <div className="form-control-div"> */}
+              
                         <FormControl
                          name="email"
                          onChange={handleChange}
@@ -64,7 +68,7 @@ const Footer = () => {
                             <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
                                             {touched.email ? errors.email : null}
                                         </Form.Control.Feedback>
-                        {/* </div> */}
+                      
                  
                     
                         
