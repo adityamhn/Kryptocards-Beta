@@ -1,7 +1,8 @@
 .footer-sec-cont {
     padding: 0;
      
-    background: rgb(0, 0, 15);
+    background-color: rgba(0,0,0,0.7);
+ 
 
 
     .wrapper {
@@ -38,14 +39,20 @@
                 }
                 .input-f {
                     font-family: "Naville";
-                    border-radius: 3px;
-                    
+                    border-radius: 7px;
+           
                     font-weight: bold;  
-            
+                    
                     background:none;
                     color:white;
                     border:2px solid #00ffff;
                     
+                }
+                @media screen and (max-width:522px) {
+                    .input-f{
+                        width: 15rem;
+                        font-size: 0.7em;
+                    }     
                 }
                 .input-f::placeholder{
                     color:#00ffff;
@@ -64,11 +71,22 @@
                     background: none;
                     color:#00ffff;
                     border: 3px solid #00ffff;
-                    height: 2.5rem;
+                    height:2.5rem;
                     font-size: 0.8rem;
                     font-weight: bold;
                     margin:0 1.2rem;
                     transition: 0.3s ease-in-out;
+          
+                }
+                @media screen and (max-width:650px) {
+                    .submit-btn-f{
+                        margin: 0 0.2rem;
+                    }
+                }
+                @media screen and (max-width:650px) {
+                    .submit-btn-f{
+                        font-size: 0.7em;
+                    }
                 }
                 .submit-btn-f:hover {
                    background-color: #00ffff;
@@ -80,18 +98,58 @@
                 @media screen and (max-width:1000px) {
                     .custom-row{
                         width:100%;
+
                     }
                 }
                 @media screen and (max-width:600px){
                     .custom-row{
-                        flex-direction: column;
-                    }
-                       
-                .submit-btn-f {
-                    width:40%;
-                    
+                        
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        .input-f{
+                           width:100%;
+                        }  
+                        .submit-btn-f {
+                            width:40%;
 
+        
+                        }
+                    }
+                
+                
                 }
+                @media screen and (max-width:600px){
+                    .custom-row{
+                         flex-direction: column;
+                         .submit-btn-f {
+                            margin:0.3rem 0;
+
+                        }
+                    }
+                
+                
+                }
+                @media screen and (max-width:400px){
+                    .custom-row{
+                         flex-direction: column;
+                         .submit-btn-f {
+                            font-size:0.6rem;
+                            
+                        }
+                    }
+                
+                
+                }
+                @media screen and (max-width:300px){
+                    .custom-row{
+                         flex-direction: column;
+                         .submit-btn-f {
+                            font-size:0.4rem;
+                            
+                        }
+                    }
+                
+                
                 }
 
             }
@@ -107,7 +165,7 @@
         .footer-bottom-portion{
             
             display:flex;
-            flex-direction:column;
+            flex-direction:row;
             width:100%;
             color:white;
             .heading-portion{
@@ -125,6 +183,16 @@
                     
                 
             }
+            @media screen and (max-width:250px) {
+                .heading-portion{
+ 
+                    font-size:1.4rem;
+   
+                        
+                    
+                }
+            }
+      
             .terms-portion{
           
                 display:flex;
@@ -133,6 +201,14 @@
                 flex:1;
                 font-size:0.7rem;
            
+            }
+        }
+        @media screen and (max-width:550px) {
+            .footer-bottom-portion{
+                
+                flex-direction: column;
+                align-items: center;
+
             }
         }
     }

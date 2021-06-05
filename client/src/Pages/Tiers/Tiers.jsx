@@ -3,7 +3,7 @@ import {store} from '../../app/store'
 import { changeNavbarMode } from '../../features/NavbarLogo/NavbarLogoSlice';
 import {TierSection} from '../../Components/TierSection';
 import './Tiers.scss';
-
+import Footer from '../../Components/Footer';
 
 export const Tiers = () => {
 
@@ -19,13 +19,17 @@ export const Tiers = () => {
     
 
     return (
+        <div className="tiers-wrapper">
         <div id="tiers-page-main-div">
                  <div id="main-heading">our<span id="color-secondary"><b>tiers</b></span></div>
 
             <div id="cards-section">
             <TierSection/>
-            </div>
             
+            </div>
+       
         </div>
+             <Footer />
+             </div>
     )
 }

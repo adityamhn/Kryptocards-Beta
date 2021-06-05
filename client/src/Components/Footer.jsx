@@ -7,7 +7,7 @@ import { SubscribeToNewsletter } from '../services/newsletter.service';
 import { showFormMessage } from '../util/util';
 const validationSchema = yup.object().shape({
     email: yup.string().email("Wrong email format!")
-        .required("Required Field!")
+        .required("This is a required field!")
         .strict(),
 })
 
@@ -23,14 +23,13 @@ const Footer = () => {
     const onFormSubmit = (values) => {
 
         SubscribeToNewsletter(values)
-            .then(response => {
-
-                showFormMessage("You Have Successfully! Subscribed!", 'success');
-            })
-            .catch(err => {
-                console.log(err.message);
-                showFormMessage("There Was A Server Error, Please Try Again Later!", 'error')
-            })
+        .then(response=>{
+            showFormMessage("You Have Successfully! Subscribed!",'success');  
+        })
+        .catch(err=>{
+            console.log(err.message);
+            showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
+        })
 
     }
 
@@ -65,10 +64,7 @@ const Footer = () => {
                                                     isInvalid={errors.email}
                                                     className="input-f col" placeholder="ENTER YOUR EMAIL" />
 
-
-                                                <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
-                                                    {touched.email ? errors.email : null}
-                                                </Form.Control.Feedback>
+ 
                                             </div>
 
 
@@ -79,7 +75,7 @@ const Footer = () => {
 
                                                     handleSubmit();
                                                 }}
-                                   
+                                                disabled={errors.email}
 
                                                 className="submit-btn-f">Subscribe</Button>
 

@@ -10,8 +10,10 @@ import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
 import { Home } from './Pages/Home/Home';
 import { Tiers } from './Pages/Tiers/Tiers';
 import { Jobs } from './Pages/Jobs/Jobs';
+ 
 function App() {
   return (
+
     <Router >
     <Navbar />
       <Switch>
@@ -22,7 +24,9 @@ function App() {
         <Route exact path="/jobs" component={Jobs}/>
         <Redirect to="/"/>
       </Switch>
+
     </Router>
+        
 
   );
 }

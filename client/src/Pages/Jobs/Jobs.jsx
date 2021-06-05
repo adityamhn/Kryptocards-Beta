@@ -5,6 +5,7 @@ import { JOBS } from '../../constants';
 import './Jobs.scss';
 import {store} from '../../app/store';
 import {changeNavbarMode} from '../../features/NavbarLogo/NavbarLogoSlice';
+import Footer from '../../Components/Footer';
 
 
 export const Jobs = () => {
@@ -17,7 +18,7 @@ export const Jobs = () => {
     return (
         <Container fluid className="jobs-cont">
             <div className="jobs-wrapper">
-                <div className="header">
+                <div className="job-header">
                     <h1 className="title"> HIRING THE <span className="other-color">EXTRAORDINARY</span> </h1>
                 </div>
                 <div className="jobs-body">
@@ -29,6 +30,7 @@ export const Jobs = () => {
                 
 
                 </div>
+                <Footer/>
             </div>
         </Container>
     )
