@@ -27,7 +27,7 @@ export const Home = () => {
         <WhatWeDo />
         <Tiers/>
         <Categories/>
-        <VideoSection/>
+   
         <Footer />
         
         </div>
