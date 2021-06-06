@@ -171,6 +171,7 @@
         .separator {
          height: 1px;
          opacity: 1;
+         margin:3rem 0;
          background-color: #00ffff;
          border-radius: 10px;   
         }
@@ -181,6 +182,7 @@
             flex-direction:row;
             width:100%;
             color:white;
+            margin-bottom:2.3rem;
             .heading-portion{
                 display:flex;
                 justify-content: flex-start;
