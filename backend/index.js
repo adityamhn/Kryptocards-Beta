@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
-var whitelist = ['http://localhost:3000']
+var whitelist = ['http://localhost:3000','https://wwww.kryptocards.tech/']
 
 var corsOptions = {
   origin: function (origin, callback) {

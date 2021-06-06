@@ -67,4 +67,10 @@
         width:100%;
     }
 }
-        
+
+@media screen and (max-width:500px) {
+ 
+#what-we-do-main-div{
+    margin-bottom:-3rem;
+}   
+}

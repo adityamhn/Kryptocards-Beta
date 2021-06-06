@@ -63,7 +63,7 @@ exports.sendEmailToRecipient = (name,email)=>{
     var mainOptions = {
         from: nodeMailerUser,
         to: email,
-        subject: "Thank you for contacting us! - Krypto Cards",
+        subject: "Thank you for contacting us!",
         html: `
         <h1>Dear ${name}</h1>,
 
@@ -71,7 +71,7 @@ exports.sendEmailToRecipient = (name,email)=>{
 
 <p>For any queries, please write to <a href="mailto:kryptocards@gmail.com">kryptocards@gmail.com</a> <p>
 
-<p>Thank you for showing your interest into Krypto Cards.</p>
+<p>Thank you for showing your interest in Krypto Cards.</p>
 
 <p style="font-weight:bold;">Stay safe. Stay healthy</p>
 
