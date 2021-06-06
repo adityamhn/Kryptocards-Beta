@@ -52,8 +52,7 @@ export const JobsCard = ({ job }) => {
 
 
     const onFormSubmit = (values) => {
-        console.log(values);
-        console.log(CV);
+ 
         const formData = new FormData();
         formData.append('name', values.name);
         formData.append('phone', values.phone);
@@ -63,11 +62,11 @@ export const JobsCard = ({ job }) => {
         formData.append('CV', CV);
         SubmitApplication(formData)
             .then(response => {
-                console.log(response);
+            
                 showFormMessage("Thank You For Your Application, We Will Reach Out To You Soon!",'success')
             })
             .catch(err => {
-                console.log(err.message);
+       
                 showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
             })
         
@@ -93,7 +92,7 @@ export const JobsCard = ({ job }) => {
                 <Card.Header className="jobs-card-header">
                     <div className="head">
                         <h1 className="job-title">{jobTitle}</h1>
-                        <div className="location"><HiOutlineLocationMarker className="icon" /> {location}</div>
+                        <div className="location">Remote - {location}</div>
                     </div>
                     <div className="btns">
                         <Button className="details-btn" onClick={handleShow}>Details</Button>

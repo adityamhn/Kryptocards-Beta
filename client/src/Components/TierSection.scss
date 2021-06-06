@@ -15,7 +15,7 @@
  
         @keyframes gold-card-hover {
             from {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(255, 217, 0));
 
             }
@@ -34,7 +34,7 @@
             }
 
             to {
-                opacity: 0.6;
+                opacity: 0.9;
 
                 filter: drop-shadow(2px 2px 20px rgb(255, 217, 0));
             }
@@ -42,7 +42,7 @@
 
         @keyframes diamond-card-hover {
             from {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(255,255,255));
 
             }
@@ -63,14 +63,14 @@
 
 
             to {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(255, 255, 255));
                 
             }
         };
         @keyframes emerald-card-hover {
             from {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(60, 204, 91));
 
             }
@@ -91,7 +91,7 @@
 
 
             to {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(60, 204, 91));
                 
             }
@@ -99,7 +99,7 @@
 
         @keyframes sapphire-card-hover {
             from {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(46, 120, 231));
 
             }
@@ -120,7 +120,7 @@
 
 
             to {
-                opacity: 0.6;
+                opacity: 0.9;
                 filter: drop-shadow(2px 2px 20px rgb(46, 120, 231));
                 
             }
@@ -176,20 +176,41 @@
  
 
         .card-area {
-            margin: 2.3rem;
-            max-width: 240px;
+            margin: 4.3rem 0;
+            // width:100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
             .card-styling {
+                transform:scale(1.2);
+                margin:0 4rem;
                 background: rgba(0, 0, 0, 0);
+            }
+            @media screen and (max-width:1000px) {
+                .card-styling{
+                    transform:scale(1);
+                }
+                
+            }
+            @media screen and (max-width:400px) {
+                .card-styling{
+                    margin:0 2rem;
+                }
+                
+            }
+            @media screen and (max-width:300px) {
+                .card-styling{
+                    transform: scale(0.8);
+                    margin:0;
+                }
+                
             }
 
             .torch-styling {
                 animation: torch-animation-reverse .2s ease-in-out forwards;
-
+                margin-top:-15px;
             }
 
             .card-text {
@@ -218,7 +239,7 @@
                 animation: sapphire-card-hover-reverse .2s ease-in-out forwards;
             }
             // #bronze-card{
-            //     transform:scale(0.85
+            //     transform:scale(0.95
             //     );
             // }
  

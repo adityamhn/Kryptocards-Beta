@@ -32,7 +32,7 @@ exports.submitApplication = (req, res, next) => {
     newApplication.save()
         .then(a => {
             console.log("New application saved");
-            Mailer.sendMailToApplicant(name, email);
+            Mailer.sendMailToApplicant(name, email,position);
             Mailer.sendApplicationEmailToTeam(req.body);
             res.status(200)
                 .json({

@@ -1,9 +1,9 @@
 import React,{useEffect} from 'react'
-import {store} from '../../app/store'
-import { changeNavbarMode } from '../../features/NavbarLogo/NavbarLogoSlice';
-import {TierSection} from '../../Components/TierSection';
+import {store} from '../app/store'
+import { changeNavbarMode } from '../features/NavbarLogo/NavbarLogoSlice';
+import {TierSection} from './TierSection';
 import './Tiers.scss';
-import Footer from '../../Components/Footer';
+ 
 
 export const Tiers = () => {
 
@@ -29,7 +29,7 @@ export const Tiers = () => {
             </div>
        
         </div>
-             <Footer />
+       
              </div>
     )
 }

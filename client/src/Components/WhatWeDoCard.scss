@@ -1,0 +1,15 @@
+.what-we-do-main-div{
+    width:25rem;
+    height:25rem;
+    background-color: rgba(0, 0, 0, 0.801);
+    
+    margin:3rem;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-wrap: wrap;
+    .image-styling{
+        transform:scale(0.3);
+    }
+}

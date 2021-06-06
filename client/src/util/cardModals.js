@@ -6,7 +6,7 @@ export const showCardModal = (color,text) => {
         width:"60%",
         heightAuto:true,
       titleText:color.toUpperCase(),
-      html: `<span class="${color}-modal-text-styling">${text} <span>`,
+      html: `<span class="${color}-modal-text-styling common-modal-text-styling">${text} <span>`,
       
       
     showConfirmButton:false,

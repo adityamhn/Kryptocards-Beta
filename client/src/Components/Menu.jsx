@@ -82,7 +82,7 @@ const Menu = ({state}) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/tiers'>
+                      to='/coming-soon'>
                       Explore
                     </Link>
                   </li>
@@ -108,7 +108,8 @@ const Menu = ({state}) => {
               </nav>
           
               <div className='locations'>
-                Categories:
+                 Categories:
+            
                 {/* Returning the list of cities */}
                 {cities.map(el => (
                   <Link className="menu-link" to="/coming-soon">

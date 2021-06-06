@@ -39,7 +39,7 @@ const formInitialValues = {
 
 const onFormSubmit = async(values) => {
     values.phoneNumber = parseInt(values.phoneNumber);
-    console.log(values);
+  
      SubmitContactForm(values).then(response=>{
         showFormMessage("Thank You For Contacting Us!",'success');   
         

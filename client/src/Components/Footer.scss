@@ -22,6 +22,19 @@
                         color: #00ffff;
                     }
                 }
+                @media screen and (max-width:500px) {
+                    .heading{
+                        font-size:1.1rem;
+                    }
+                }
+                @media screen and (max-width:350px) {
+                    .heading{
+                        font-size:1rem;
+                    }
+                }
+
+
+
                 .custom-row{
                     width:50%;
                     display:flex;
@@ -177,13 +190,13 @@
                 font-family:"Reformation";
                 .title2{
                     font-family:"Reformation";
-                    color: #05030400 ;
-                    -webkit-text-stroke: 0.8px #00ffff ;
+                    color: rgba(0,0,0,0);
+                    -webkit-text-stroke: 1.8px #00ffff ;
                 }
                     
                 
             }
-            @media screen and (max-width:250px) {
+            @media screen and (max-width:300px) {
                 .heading-portion{
  
                     font-size:1.4rem;
@@ -192,6 +205,31 @@
                     
                 }
             }
+            .social-media-portion{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .logo.insta-logo{
+                    margin-bottom:0.3px;
+                    
+                }
+                .logo{
+                    margin:0.3rem 2rem;
+                    opacity:0.7;
+                    transition:0.3s ease-in-out;                    
+                }
+                @media screen and (max-width:300px) {
+                    .logo{
+                        margin:0.3rem 0.9rem;
+                    }   
+        }
+                .logo:hover{
+                    opacity:1;
+                }
+              
+
+            }
       
             .terms-portion{
           
@@ -199,17 +237,20 @@
                 justify-content: flex-end;
                 align-items: center;
                 flex:1;
-                font-size:0.7rem;
+                font-size:0.9rem;
            
             }
         }
-        @media screen and (max-width:550px) {
+        @media screen and (max-width:1000px) {
             .footer-bottom-portion{
                 
                 flex-direction: column;
                 align-items: center;
-
+                .social-media-portion{
+                    margin:1.2rem 0.3rem;
+                }
             }
         }
+     
     }
 }

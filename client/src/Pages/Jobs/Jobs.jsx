@@ -22,7 +22,7 @@ export const Jobs = () => {
                     <h1 className="title"> HIRING THE <span className="other-color">EXTRAORDINARY</span> </h1>
                 </div>
                 <div className="jobs-body">
-                <h3 className="title">Jobs Open</h3>
+
                 {JOBS.map((job,index) => (
                     <JobsCard key={index} job={job} />
 
@@ -30,7 +30,7 @@ export const Jobs = () => {
                 
 
                 </div>
-                <Footer/>
+                <Footer showGetUpdates={false}/>
             </div>
         </Container>
     )

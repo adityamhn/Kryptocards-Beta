@@ -68,23 +68,7 @@ export const Hero = () => {
 
                 </div>
                 <div className="swiper-sec">
-                    {/* <div className="fore-ground" /> */}
-                    {/* {slides.map((slide, index) => {
-                        return (
-                            <>
-                                <div className="swiper-card-sec" key={index}>
-                                    {index === current && (
-                                        <>
-                                            <Image src={index === 0 ? slides[slides.length - 1] : slides[index - 1]} className="swiper-card inactive-card" />
-                                            <Image src={slides[index]} className="card-active swiper-card" />
-                                            <Image src={index === slides.length - 1 ? slides[0] : slides[index + 1]} className="swiper-card inactive-card" />
-                                        </>
-                                    )}
-                                </div>
-                            </>
-                        )
-                    })} */}
-
+        
                     <Coverflow
                         width={960}
                         height={480}

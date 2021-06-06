@@ -12,20 +12,22 @@
     font-weight:medium;
     #what-we-do-heading{
       
-        width:50%;
+        width:100%;
         font-family:"Reformation";
         color:white;
         display:flex;
-        margin-left: 2.5vw;
+        font-weight:bold;
         align-items: center;
         justify-content: center;
-        font-size:5rem;
+        font-size:6rem;
         
         text-transform: uppercase;
         #question-mark{
-            padding:0 9px;
             font-family:"Reformation";
-            color:#00ffff;
+            padding:0 15px;
+            color: #00ffff;
+           
+           
         }
         
 
@@ -47,91 +49,31 @@
             font-size:3.0rem;
         }
     }
+    @media screen and (max-width:400px){
+        #what-we-do-heading{
+            font-size:2.4rem;
+        }
+    }
+    @media screen and (max-width:300px){
+        #what-we-do-heading{
+            font-size:2rem;
+        }
+    }
+    @media screen and (max-width:240px){
+        #what-we-do-heading{
+            font-size:1.8rem;
+        }
+    }
 
-
-    #what-we-do-content{
-     
-        padding:1rem;
-        width:100%;
-        margin-left: 4vw;
+    .what-we-do-cards {
         display:flex;
-        text-align: center;
-        flex-direction:row-reverse;
-        
-
-        #cards-section{
-            
-        
-            display:flex;
-            flex-direction:row;
-            flex-wrap: wrap;
-            
-            width: 50vw;
-            margin-left: 7vw;
-            // flex:0.51;
-            .card-styling{
-                margin:0 2rem;
-                margin-bottom: 2rem;
-                
-            }
-        }
-
-        #text-section{
-            font-family:"Reformation";
-            padding-top:2.5rem;
-            // flex:0.8;
-            width: 50vw;
-            color:white;
-            font-size:1.4rem;
-            .color-primary{
-                color:#00ffff;
-            }
-        }
-    }
-
-    @media screen and(max-width:1203px) {
-        #what-we-do-content{
-            width: 100vw;
-            flex-direction:column-reverse;
-            text-align: center;
-            #cards-section{
-                justify-content: center;
-            }
-            #text-section{
-                width: 90vw;
-            }
-            #cards-section{
-                display: flex;
-                width: 100vw;
-                margin: 0 0 0 -3vw;
-                justify-content: center;
-            }
-        }
-        
-    }
-    @media screen and(max-width:850px) {
-        #what-we-do-content{
-          #text-section{
-              font-size:1.4rem;
-          }
-           
-        }
-        
-    }
-    @media screen and(max-width:400px) {
-        #what-we-do-content{
-            margin:0;
-          #cards-section{
-
-              .card-styling{
-                  width: 80%;
-                  padding: 0;
-                  margin:0 0.4rem;
-                  margin-bottom:0;
-              }
-          }
-           
-        }
-        
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: center;
+        // align-items: center;
+        width:100%;
     }
 }
+        
+  
+ 
