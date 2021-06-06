@@ -20,6 +20,13 @@ router.post('/subscribe-newsletter',NewsletterController.subscribeToNewsletter);
 
 router.get("/unsubscribe-newsletter/:id",NewsletterController.unsubscribeToNewsletter);
 
+router.get('/test-request',(req,res,next)=>{
+  return res.status(200).json({
+    success:true,
+  })
+})
+
+
 
  //application uploading;
 const storage = multer.diskStorage({
