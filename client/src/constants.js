@@ -19,7 +19,7 @@ export const JOBS = [
              from all our applicants.`
     },
     {
-        jobTitle : "Software Developer - Frontend",
+        jobTitle : "Frontend Developer",
         location : "India",
         shortDesc : `Hiring a developer who has knowledge of
          React and related technologies, 
@@ -39,7 +39,7 @@ export const JOBS = [
                discreteness from all our applicants.`
     },
     {
-        jobTitle : "Software Developer - Backend",
+        jobTitle : "Backend Developer",
         location : "India",
         shortDesc : `Hiring a developer who has basic knowledge of node.js 
         and is willing to learn more. Moreover Blockchain/Solidity
