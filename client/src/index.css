@@ -15,16 +15,16 @@ code {
     monospace;
 }
 *{
-  font-family:"Bodonixt";
+  font-family:"Reformation";
 }
 @font-face{
-  font-family:"Naville";
-  src : url(./fonts/Naville-Regular\ DEMO.ttf);
+  font-family:"Reformation";
+  src : url(./fonts/reformation\ sans\ regular.ttf);
   font-weight: bold;  
 }
 
 .cancel-button-styling-common{
-  font-family: "Naville" !important;
+  font-family: "Bodonixt" !important;
   border:none !important;
 
   background:none !important;
