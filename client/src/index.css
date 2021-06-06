@@ -14,20 +14,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+*{
+  font-family:"Reformation";
+}
 @font-face{
   font-family:"Reformation";
   src : url(./fonts/reformation\ sans\ regular.ttf);
-
-}
-@font-face{
-  font-family:"Naville";
-  src : url(./fonts/Naville-Regular\ DEMO.ttf);
   font-weight: bold;  
 }
 
 .cancel-button-styling-common{
-  font-family: "Naville" !important;
+  font-family: "Bodonixt" !important;
   border:none !important;
 
   background:none !important;

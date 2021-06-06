@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { WhatWeDoCard } from './WhatWeDoCard';
 
 export const WhatWeDo = () => {
-    const ethereumImage = BACKEND_URL +'/public/assets/Logos/etherium_svg.svg';
+    const ethereumImage = BACKEND_URL +'/public/assets/Logos/nft_logo.svg';
     const walletImage = BACKEND_URL + '/public/assets/Logos/wallet_svg.svg'
     const treesImage = BACKEND_URL + '/public/assets/Logos/trees_svg.svg'
     const introImage = BACKEND_URL + '/public/assets/Logos/intro_svg.svg'

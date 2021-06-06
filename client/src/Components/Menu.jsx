@@ -18,10 +18,10 @@ import {
   } from "./Animations";
 
 const cities = [
-  { name: "Basketball", image: BACKEND_URL + "/public/images/fiction.jpg" },
-  { name: "Football", image: BACKEND_URL + "/public/images/basketball.jpg" },
-  { name: "Anime", image: BACKEND_URL + "/public/images/football.jpg" },
-  { name: "Fiction", image: BACKEND_URL + "/public/images/anime.jpg" }
+  { name: "Basketball", image: BACKEND_URL + "/public/images/basketball.jpg" },
+  { name: "Football", image: BACKEND_URL + "/public/images/football.jpg" },
+  { name: "Anime", image: BACKEND_URL + "/public/images/anime.jpg" },
+  { name: "Fiction", image: BACKEND_URL + "/public/images/fiction.jpg" }
 ];
 
 
