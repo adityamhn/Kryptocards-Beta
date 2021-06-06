@@ -13,7 +13,6 @@ export const Categories = () => {
                 <CategoriesCard/>
                 <CategoriesCard/>
                 <CategoriesCard/>
-                <CategoriesCard/>
             </div>
         </div>
     )

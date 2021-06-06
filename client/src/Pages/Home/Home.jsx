@@ -23,8 +23,8 @@ export const Home = () => {
         <div className="layer">
         <Hero />
         <WhatWeDo />
-        <Categories/>
         <Tiers/>
+        <Categories/>
         <Footer />
         </div>
         </Container>
