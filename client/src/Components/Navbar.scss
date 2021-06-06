@@ -39,6 +39,7 @@
 // }
 
 .navbar-cont {
+
     height: 80px;
     margin-bottom:-80px;
     .inner-header {
@@ -47,8 +48,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // padding: 0rem 3rem;
-      padding-right:3rem;
+      .logo{
+        
+          margin-top:5px;
+        
+      }
+      
   
       .menu {
         button {

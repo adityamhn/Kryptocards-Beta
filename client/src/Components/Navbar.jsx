@@ -66,7 +66,7 @@ const Navbar = ({ history }) => {
             <div className="wrapper">
                 <div className="inner-header">
                     <div className="logo">
-                        <Link to='/'>{iconToShow === "LOGO" ? <KryptocardsAnimation /> : iconToShow === "TEXT" ? <KryptoCardsNavbarText /> : null}
+                        <Link  className="logo-styling"  to='/'>{iconToShow === "LOGO" ? <KryptocardsAnimation/> : iconToShow === "TEXT" ? <KryptoCardsNavbarText/> : null}
                         </Link>
                     </div>
 

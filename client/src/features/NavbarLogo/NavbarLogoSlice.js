@@ -7,7 +7,7 @@ const slice = createSlice({
     initialState: {value : "LOGO",show:true},
     reducers: {
         changeNavbarMode: (state, action) => {
-            console.log("Logo changed")
+          
             state.value = action.payload.value;
             state.show = action.payload.show;
             

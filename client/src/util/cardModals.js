@@ -6,7 +6,7 @@ export const showCardModal = (color,text) => {
         width:"60%",
         heightAuto:true,
       titleText:color.toUpperCase(),
-      html: `<span class="${color}-modal-text-styling">${text} <span>`,
+      html: `<span class="${color}-modal-text-styling common-modal-text-styling">${text} <span>`,
       
       
     showConfirmButton:false,
@@ -19,7 +19,7 @@ export const showCardModal = (color,text) => {
       },
       customClass : {
         cancelButton : `${color}-cancel-button-styling cancel-button-styling-common`,
-        title:`${color}-modal-text-styling cancel-button-styling-common`,
+        title:`${color}-modal-text-styling`,
         container:`${color}-modal-container-styling modal-container-styling-common`,
         popup:`${color}-modal-popup-styling modal-popup-styling-common`
       },

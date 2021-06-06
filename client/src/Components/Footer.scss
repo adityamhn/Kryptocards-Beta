@@ -1,7 +1,8 @@
 .footer-sec-cont {
     padding: 0;
      
-    background: rgb(0, 0, 15);
+    background-color: rgba(0,0,0,0.7);
+ 
 
 
     .wrapper {
@@ -21,23 +22,50 @@
                         color: #00ffff;
                     }
                 }
-                .column{
+                @media screen and (max-width:500px) {
+                    .heading{
+                        font-size:1.1rem;
+                    }
+                }
+                @media screen and (max-width:350px) {
+                    .heading{
+                        font-size:1rem;
+                    }
+                }
+
+
+
+                .custom-row{
+                    width:50%;
+                    display:flex;
+                    flex-direction: row;
+
+                
+                .custom-col{
+                    flex:1;
                     display:flex;
                     flex-direction: column;
+                }
                 .form-control-div{
                     display: flex;
                     flex-direction: column;
                 }
                 .input-f {
                     font-family: "Naville";
-                    border-radius: 3px;
-                    height: 2.5rem;
+                    border-radius: 7px;
+           
                     font-weight: bold;  
-                    width:20rem;
+                    
                     background:none;
                     color:white;
                     border:2px solid #00ffff;
                     
+                }
+                @media screen and (max-width:522px) {
+                    .input-f{
+                        width: 15rem;
+                        font-size: 0.7em;
+                    }     
                 }
                 .input-f::placeholder{
                     color:#00ffff;
@@ -51,15 +79,27 @@
                 .submit-btn-f {
                     font-family: "Naville";
                     border-radius: 7px;
-                   padding:0.3rem 3rem;
+                
+                   flex:0.5;
                     background: none;
                     color:#00ffff;
                     border: 3px solid #00ffff;
-                    height: 2.5rem;
+                    height:2.5rem;
                     font-size: 0.8rem;
                     font-weight: bold;
                     margin:0 1.2rem;
                     transition: 0.3s ease-in-out;
+          
+                }
+                @media screen and (max-width:650px) {
+                    .submit-btn-f{
+                        margin: 0 0.2rem;
+                    }
+                }
+                @media screen and (max-width:650px) {
+                    .submit-btn-f{
+                        font-size: 0.7em;
+                    }
                 }
                 .submit-btn-f:hover {
                    background-color: #00ffff;
@@ -68,6 +108,62 @@
 
                 }
                 }
+                @media screen and (max-width:1000px) {
+                    .custom-row{
+                        width:100%;
+
+                    }
+                }
+                @media screen and (max-width:600px){
+                    .custom-row{
+                        
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        .input-f{
+                           width:100%;
+                        }  
+                        .submit-btn-f {
+                            width:40%;
+
+        
+                        }
+                    }
+                
+                
+                }
+                @media screen and (max-width:600px){
+                    .custom-row{
+                         flex-direction: column;
+                         .submit-btn-f {
+                            margin:0.3rem 0;
+
+                        }
+                    }
+                
+                
+                }
+                @media screen and (max-width:400px){
+                    .custom-row{
+                         flex-direction: column;
+                         .submit-btn-f {
+                            font-size:0.6rem;
+                            
+                        }
+                    }
+                
+                
+                }
+                @media screen and (max-width:300px){
+                    .custom-row{
+                         flex-direction: column;
+                         .submit-btn-f {
+                            font-size:0.4rem;
+                            
+                        }
+                    }
+                
+                
+                }
 
             }
         }
@@ -75,6 +171,7 @@
         .separator {
          height: 1px;
          opacity: 1;
+         margin:3rem 0;
          background-color: #00ffff;
          border-radius: 10px;   
         }
@@ -82,9 +179,10 @@
         .footer-bottom-portion{
             
             display:flex;
-            flex-direction:column;
+            flex-direction:row;
             width:100%;
             color:white;
+            margin-bottom:2.3rem;
             .heading-portion{
                 display:flex;
                 justify-content: flex-start;
@@ -94,21 +192,67 @@
                 font-family:"Reformation";
                 .title2{
                     font-family:"Reformation";
-                    color: #05030400 ;
-                    -webkit-text-stroke: 0.8px #00ffff ;
+                    color: rgba(0,0,0,0);
+                    -webkit-text-stroke: 1.8px #00ffff ;
                 }
                     
                 
             }
+            @media screen and (max-width:300px) {
+                .heading-portion{
+ 
+                    font-size:1.4rem;
+   
+                        
+                    
+                }
+            }
+            .social-media-portion{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .logo.insta-logo{
+                    margin-bottom:0.3px;
+                    
+                }
+                .logo{
+                    margin:0.3rem 2rem;
+                    opacity:0.7;
+                    transition:0.3s ease-in-out;                    
+                }
+                @media screen and (max-width:300px) {
+                    .logo{
+                        margin:0.3rem 0.9rem;
+                    }   
+        }
+                .logo:hover{
+                    opacity:1;
+                }
+              
+
+            }
+      
             .terms-portion{
           
                 display:flex;
                 justify-content: flex-end;
                 align-items: center;
                 flex:1;
-                font-size:0.7rem;
+                font-size:0.9rem;
            
             }
         }
+        @media screen and (max-width:1000px) {
+            .footer-bottom-portion{
+                
+                flex-direction: column;
+                align-items: center;
+                .social-media-portion{
+                    margin:1.2rem 0.3rem;
+                }
+            }
+        }
+     
     }
 }

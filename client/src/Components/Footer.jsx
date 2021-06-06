@@ -1,107 +1,52 @@
 import React from 'react'
-import { Container,Button, FormControl, Form } from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
+import { BACKEND_URL } from '../constants'
 import './Footer.scss'
-import * as yup from 'yup';
-import {Formik} from 'formik';
-import { SubscribeToNewsletter } from '../services/newsletter.service';
-import {showFormMessage} from '../util/util';
-const validationSchema = yup.object().shape({
-    email: yup.string().email("Wrong email format!")
-        .required("Required Field!")
-        .strict(),
-})
-
-const formInitialValues = {
- 
-    email: '',
+import { GetUpdates } from './GetUpdates'
  
 
-}
 
-
-const Footer = () => {
-    const onFormSubmit = (values)=>{
-        
-        SubscribeToNewsletter(values)
-        .then(response=>{
-
-            showFormMessage("You Have Successfully! Subscribed!",'success');  
-        })
-        .catch(err=>{
-            console.log(err.message);
-            showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
-        })
-
-    }
+const Footer = ({showGetUpdates = true}) => {
+    const linkedinSVG  = BACKEND_URL + '/public/assets/Logos/linkedin_logo.svg'
+    const instagramSVG  = BACKEND_URL + '/public/assets/Logos/instagram_logo.svg'
+    const emailSVG  = BACKEND_URL + '/public/assets/Logos/email_logo.svg'
 
 
     return (
-        
+
         <Container fluid className="footer-sec-cont">
-            
-        <div className="wrapper">
-            <div className="header">
-            
-            <Formik
-                initialValues={formInitialValues}
-                validationSchema={validationSchema}
-                onSubmit={(values) => {
 
-                    onFormSubmit(values);
-                }}
-            >
-                {
-                    ({ handleChange, handleBlur, handleSubmit, values, touched, errors }) => {
-
-                        return (
-            <Form  className="form-sec">
-            <Form.Label className="heading">GET OUR LATEST <span className="other-color">UPDATES</span></Form.Label>
-            <div className="column">
-                        <Form.Group>
-              
-                        <FormControl
-                         name="email"
-                         onChange={handleChange}
-                         onBlur={handleBlur}
-                         isInvalid={errors.email}
-                        className="input-f col" placeholder="ENTER YOUR EMAIL" />
-                            <Form.Control.Feedback type='invalid' className="ml-3 signup-form-control-feedback">
-                                            {touched.email ? errors.email : null}
-                                        </Form.Control.Feedback>
-                      
-                 
-                    
-                        
-                    
-                            <Button
-                            onClick={(e) => {
-                                e.preventDefault();
-
-                                handleSubmit();
-                            }}
-                            // disabled={!errors.email}
-                            
-                            className="submit-btn-f col">Subscribe</Button>
-                     </Form.Group>
+            <div className="wrapper">
+                {showGetUpdates ? <GetUpdates/>:null}
+                <hr className="separator" />
+                <div className="footer-bottom-portion">
+                    <div className="heading-portion">
+                        KRYPTO <div className="title2">CARDS</div>
                     </div>
-            </Form>
-                          )
-                        }}
-                </Formik>
-            </div>
-            <hr className="separator" />
-            <div className="footer-bottom-portion">
-                <div className="heading-portion">
-                        KRYPTO <div className="title2">CARDS</div> 
+                    <div className="social-media-portion">
+                    <a   target="_blank" href="https://www.instagram.com/krypto.cards/">
+                        <img className='logo insta-logo' src={instagramSVG} alt="" />
+                        </a>
+                        <a   target="_blank"  href="https://www.linkedin.com/company/kryptocards/">
+                        <img className='logo' src={linkedinSVG} alt="" />
+                        </a>
+                      
+                        <a  target="_blank"  href="mailto:kryptocards@gmail.com">
+                        <img className='logo' src={emailSVG} alt="" />
+                        </a>
+                    </div>
+                    <div className="terms-portion">
+                        Kryptocards &copy; 2021
                 </div>
-                <div className="terms-portion">
-                &copy; All Rights Reserved
                 </div>
             </div>
-        </div>
 
         </Container>
     )
 }
 
 export default Footer
+
+
+
+

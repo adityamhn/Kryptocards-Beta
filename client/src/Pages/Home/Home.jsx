@@ -6,8 +6,10 @@ import {store} from '../../app/store';
 import {changeNavbarMode} from '../../features/NavbarLogo/NavbarLogoSlice';
 import {WhatWeDo} from '../../Components/WhatWeDo'
 import Footer from '../../Components/Footer'
-
-
+ 
+import {Tiers} from '../../Components/Tiers';
+import { Categories } from '../../Components/Categories';
+import { VideoSection } from '../../Components/VideoSection';
 
 export const Home = () => {
     useEffect(()=>{
@@ -21,7 +23,10 @@ export const Home = () => {
  
         <div className="layer">
         <Hero />
+        <VideoSection/>
         <WhatWeDo />
+        <Tiers/>
+        <Categories/>
         <Footer />
         </div>
         </Container>

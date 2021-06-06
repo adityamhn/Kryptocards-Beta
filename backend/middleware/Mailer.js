@@ -130,7 +130,7 @@ exports.sendEmailToTeam = ({name,email,phoneNumber,message})=>{
 
 
 
-exports.sendMailToApplicant = (name,email)=>{
+exports.sendMailToApplicant = (name,email,position)=>{
 
 
     var mainOptions = {
@@ -141,7 +141,9 @@ exports.sendMailToApplicant = (name,email)=>{
         html: `
         Dear ${name},
 
-        <p>Thank you for applying for the position of "ABC". We have received your application and will review it. Currently we are not hiring, but the position is still vacant and we will be contacting you for the interview after reviewing your application.</p>
+        <p>Thank you for applying for the position of "${position}". We have received your application and will be reviewing it.
+         The position is vacant and we will be contacting you 
+         for the interview after reviewing your application.</p>
         
         <p>For any queries, please write to kryptocards@gmail.com </p>
         
