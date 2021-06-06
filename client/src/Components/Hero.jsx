@@ -15,8 +15,10 @@ export const Hero = () => {
     const madara = BACKEND_URL + '/public/images/madara.svg'
     const lelouch = BACKEND_URL + '/public/images/lelouch.svg'
     const peacePain = BACKEND_URL + "/public/images/peace_pain.svg";
+    const kobe = BACKEND_URL + "/public/images/kobe.svg";
+    const neymar = BACKEND_URL + "/public/images/neymar.svg";
     
-    const [slides, setSlides] = useState([madara,peacePain,lelouch]);
+    const [slides, setSlides] = useState([madara,peacePain,lelouch,kobe,neymar]);
     const [current, setCurrent] = useState(0);
     const length = slides.length
     const timeout = useRef(null)
