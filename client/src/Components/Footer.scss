@@ -3,6 +3,7 @@
      margin-top:5rem;
     background-color: rgba(0,0,0,0.7);
  
+    font-family:"Reformation";
 
 
     .wrapper {
@@ -51,7 +52,6 @@
                     flex-direction: column;
                 }
                 .input-f {
-                    font-family: "Naville";
                     border-radius: 7px;
            
                     font-weight: bold;  
@@ -77,7 +77,7 @@
                 }
                
                 .submit-btn-f {
-                    font-family: "Naville";
+                    
                     border-radius: 7px;
                 
                    flex:0.5;
@@ -85,7 +85,7 @@
                     color:#00ffff;
                     border: 3px solid #00ffff;
                     height:2.5rem;
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                     font-weight: bold;
                     margin:0 1.2rem;
                     transition: 0.3s ease-in-out;
