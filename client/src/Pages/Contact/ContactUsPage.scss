@@ -9,7 +9,6 @@
     font-weight: 700;
     background: url(https://kryptocards-teaser.herokuapp.com/public/assets/backgrounds/contact-form-background.png) no-repeat center center fixed;
     background-size: cover;
-    min-width: 100vw;
     min-height: 100vh;
     font-family: "Spartan";
 
@@ -105,7 +104,6 @@
         }
 
         #form-submit-button {
-            font-family: "Naville";
             border: 2px solid #00ffff;
             background: none;
             color: #00ffff;

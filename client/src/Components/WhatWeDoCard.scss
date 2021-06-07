@@ -1,6 +1,5 @@
 .what-we-do-main-div{
     width:40vw;
-    min-height:80vh;
     padding:1.4rem;
     background-color: rgba(0, 0, 0, 0.801);
     border:2px solid #00ffff;
@@ -8,8 +7,21 @@
     border-radius: 30px;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    min-height:80vh;
+
+    @media screen and (max-width:1000px) {
+        width: 60vw;
+    }
+
+    
+@media screen and (max-width:700px) {
+
+      width:80vw;
+  
+  }
+
 //    flex-wrap: wrap;
 .test-para-wrapper{
     margin-top:4rem;
@@ -18,7 +30,7 @@
         color:white;
         font-size:1.7rem;
         display:flex;
-        align-items: flex-end;
+        justify-content: center;
        }
        @media screen and (max-width:1200px) {
         .test-para{
@@ -37,12 +49,12 @@
 
 
     .image-styling{
-        flex:0.4;
-        
+        width: 15rem;
+        height: 15rem;
     }
     @media screen and (max-width:1100px) {
         .image-styling{
-            transform: scale(0.6);
+            transform: scale(0.8);
         }
          
 
@@ -58,12 +70,4 @@
     
 }
 
-@media screen and (max-width:1000px) {
 
-  .what-we-do-main-div{
-    width:80vw;
-
-
-  }
-
-}

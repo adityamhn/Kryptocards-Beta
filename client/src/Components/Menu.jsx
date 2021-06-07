@@ -2,7 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import './Menu.scss'
-import {BACKEND_URL} from '../constants';
+import anime from '../images/anime.jpg';
+import basketball from '../images/basketball.jpg';
+import fiction from '../images/fiction.jpg';
+import football from '../images/anime.jpg';
 
 
 
@@ -18,10 +21,10 @@ import {
   } from "./Animations";
 
 const cities = [
-  { name: "Basketball", image: BACKEND_URL + "/public/images/basketball.jpg" },
-  { name: "Football", image: BACKEND_URL + "/public/images/football.jpg" },
-  { name: "Anime", image: BACKEND_URL + "/public/images/anime.jpg" },
-  { name: "Fiction", image: BACKEND_URL + "/public/images/fiction.jpg" }
+  { name: "Basketball", image: basketball },
+  { name: "Football", image: football },
+  { name: "Anime", image: anime },
+  { name: "Fiction", image: fiction }
 ];
 
 
