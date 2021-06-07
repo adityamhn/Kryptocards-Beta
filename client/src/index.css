@@ -24,9 +24,10 @@ code {
 }
 
 .cancel-button-styling-common{
-  font-family: "Bodonixt" !important;
+  font-family: "Naville" !important;
   border:none !important;
-
+  text-transform: uppercase;
+  
   background:none !important;
   transition:0.4s ease-in-out !important;
 }
