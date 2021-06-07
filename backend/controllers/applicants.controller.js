@@ -27,7 +27,7 @@ exports.submitApplication = (req, res, next) => {
         email,
         position,
         message,
-        CV: req.file.path
+        CV: (req.file ? req.file.path : null)
     })
     newApplication.save()
         .then(a => {

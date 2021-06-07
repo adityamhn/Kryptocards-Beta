@@ -23,7 +23,7 @@ const validationSchema = yup.object().shape({
         .required("This is a required field!")
         .strict(),
 
-    message: yup.string('Wrong field format!').strict()
+    message: yup.string('Wrong field format!').required("This is a required field!").min(10).strict()
 
 
 })
@@ -52,7 +52,11 @@ export const JobsCard = ({ job }) => {
 
 
     const onFormSubmit = (values) => {
- 
+        if (!CV){
+
+            showFormMessage("CV is required!",'error')
+            return;
+        }
         const formData = new FormData();
         formData.append('name', values.name);
         formData.append('phone', values.phone);
@@ -186,12 +190,12 @@ export const JobsCard = ({ job }) => {
                                                         </Form.Control.Feedback>
                                                     </Form.Group>
                                                     <Form.Group as={Col} className="group">
-                                                        <Form.Label className="label">CV</Form.Label>
+                                                        <Form.Label className="label">CV<span className="asterisk">*</span></Form.Label>
                                                         <Form.Control onChange={onCVChange} type="file" accept="application/pdf" className="field" />
                                                     </Form.Group>
                                                 </Row>
                                                 <Form.Group className="group">
-                                                    <Form.Label className="label">Message (if any)</Form.Label>
+                                                    <Form.Label className="label">Why You Want To Join Us<span className="asterisk">*</span></Form.Label>
                                                     <Form.Control as="textarea" className="textarea"
                                                         name="message"
                                                         onChange={handleChange}

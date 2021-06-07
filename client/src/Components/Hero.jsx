@@ -12,11 +12,12 @@ import Coverflow from 'react-coverflow';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const Hero = () => {
-    const madara = BACKEND_URL + '/public/images/madara.svg'
+ 
     const lelouch = BACKEND_URL + '/public/images/lelouch.svg'
-    const peacePain = BACKEND_URL + "/public/images/peace_pain.svg";
-    
-    const [slides, setSlides] = useState([madara,peacePain,lelouch]);
+    const peacePain = BACKEND_URL + "/public/images/peace_pain.png";
+    const kobeCard = BACKEND_URL + "/public/images/kobe_bryant.png"    
+    const neymarCard = BACKEND_URL + "/public/images/neymar.png"    
+    const [slides, setSlides] = useState([peacePain,kobeCard,neymarCard,lelouch]);
     const [current, setCurrent] = useState(0);
     const length = slides.length
     const timeout = useRef(null)
@@ -90,8 +91,7 @@ export const Hero = () => {
 
                             />
                         </div>
-                        <Image src={slides[1]} />
-                        <Image src={slides[2]} />
+                        {slides.slice(1).map(image=>(<Image src={image} />))}
                     </Coverflow>
                 </div>
 

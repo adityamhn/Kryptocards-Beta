@@ -9,10 +9,6 @@ export const TierSection = () => {
     const diamondCard  =  BACKEND_URL  + '/public/assets/cards/diamond.svg';
     const sapphireCard  =  BACKEND_URL  + '/public/assets/cards/sapphire.svg';
     const emeraldCard  =  BACKEND_URL  + '/public/assets/cards/emerald.svg';
-    const diamondTorch  =  BACKEND_URL  + '/public/assets/Torches/diamond_torch.svg'
-    const silverTorch  =  BACKEND_URL  + '/public/assets/Torches/sapphire_torch.svg'
-    const goldTorch  =  BACKEND_URL  + '/public/assets/Torches/golde_torch.svg'
-    const emeraldTorch  =  BACKEND_URL  + '/public/assets/Torches/emerald_torch.svg'
     const onGoldClick = (e)=>{
         showCardModal('gold',`The Cards With <span style="font-weight:bold;">Midas's Touch</span>`);
     }
