@@ -59,8 +59,9 @@
     @media screen and (max-width:550px){
         .jobs-card-header{
             flex-direction:column;
+            
             .btns{
-                margin:10px 0;
+                margin:10px -8px;
             }
             .head{
                 .job-title{
@@ -125,8 +126,11 @@
                 color: #00ffff;
                 font-weight: bold;
                 font-size: 3rem;
-
+                @media screen and (max-width:) {
+                
+                }
             }
+            
             @media  screen and (max-width:350px) {
                 .title{
                     font-size:2rem;
@@ -227,7 +231,9 @@
                 display: flex;
                 justify-content: center;
                 padding-top:2rem ;
-
+                .spinner-styling{
+                    color:#00ffff;
+                }
                 .submit-btn {
                     background-color: #fff;
                     border:2px solid #fff;

@@ -6,6 +6,7 @@ const Mailer = require('../middleware/Mailer');
 
 
 exports.submitApplication = (req, res, next) => {
+    console.log(req.file);
     const {
         name,
         phone,

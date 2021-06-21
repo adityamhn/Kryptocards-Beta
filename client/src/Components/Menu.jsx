@@ -5,7 +5,7 @@ import './Menu.scss'
 import anime from '../images/anime.jpg';
 import basketball from '../images/basketball.jpg';
 import fiction from '../images/fiction.jpg';
-import football from '../images/anime.jpg';
+import football from '../images/football.jpg';
 
 
 

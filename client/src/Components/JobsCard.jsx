@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card, Col, Form, Modal, Row } from 'react-bootstrap'
+import { Button, Card, Col, Form, Modal, Row,Spinner } from 'react-bootstrap'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { IoArrowBackOutline } from 'react-icons/io5'
 import { MdClose } from 'react-icons/md'
@@ -47,32 +47,37 @@ export const JobsCard = ({ job }) => {
     const [CV, setCV] = useState(null);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const [showLoader,setShowLoader] = useState(false);
 
 
 
     const onFormSubmit = (values) => {
-        if (!CV){
+        // if (!CV){
 
-            showFormMessage("CV is required!",'error')
-            return;
-        }
-        const formData = new FormData();
-        formData.append('name', values.name);
-        formData.append('phone', values.phone);
-        formData.append('email', values.email);
-        formData.append('position', jobTitle);
-        formData.append('message', values.message);
-        formData.append('CV', CV);
-        SubmitApplication(formData)
-            .then(response => {
-            
-                showFormMessage("Thank You For Your Application, We Will Reach Out To You Soon!",'success')
-            })
-            .catch(err => {
+        //     showFormMessage("CV is required!",'error')
+        //     return;
+        // }
+        setShowLoader(true);
        
-                showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
-            })
+            const formData = new FormData();
+            formData.append('name', values.name);
+            formData.append('phone', values.phone);
+            formData.append('email', values.email);
+            formData.append('position', jobTitle);
+            formData.append('message', values.message);
+            formData.append('CV', CV);
+            SubmitApplication(formData)
+                .then(response => {
+                
+                    showFormMessage("Thank You For Your Application, We Will Reach Out To You Soon!",'success')
+                    
+                })
+                .catch(err => {
+           
+                    showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
+                })
+                setShowLoader(false);
+        
         
     }
 
@@ -190,7 +195,7 @@ export const JobsCard = ({ job }) => {
                                                         </Form.Control.Feedback>
                                                     </Form.Group>
                                                     <Form.Group as={Col} className="group">
-                                                        <Form.Label className="label">CV<span className="asterisk">*</span></Form.Label>
+                                                        <Form.Label className="label">CV</Form.Label>
                                                         <Form.Control onChange={onCVChange} type="file" accept="application/pdf" className="field" />
                                                     </Form.Group>
                                                 </Row>
@@ -207,12 +212,18 @@ export const JobsCard = ({ job }) => {
                                                     </Form.Control.Feedback>
                                                 </Form.Group>
                                                 <Form.Group className="submit-group">
-                                                    <Button onClick={(e) => {
-                                    e.preventDefault();
-
-                                    handleSubmit();
-                                }} 
-                                className="submit-btn">Submit</Button>
+                                                    {!showLoader ?  
+                                                <Button onClick={(e) => {
+                                                    e.preventDefault();
+                
+                                                    handleSubmit();
+                                                }} 
+                                                className="submit-btn">Submit</Button>
+                                                 : 
+                                                 <Spinner animation="border" className="spinner-styling"/>    
+                                                
+                                                }
+                                                    
                                                 </Form.Group>
                                             </Form>
                                         )
