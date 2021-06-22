@@ -7,7 +7,8 @@ import './JobsCard.scss'
 import { Formik, yupToFormErrors } from 'formik';
 import * as yup from 'yup';
 import { SubmitApplication } from '../services/applicants.service'
-import {showFormMessage} from '../util/util';
+import { showFormMessage } from '../util/util';
+import { useHistory } from 'react-router-dom'
 
 
 const validationSchema = yup.object().shape({
@@ -42,6 +43,7 @@ const formInitialValues = {
 export const JobsCard = ({ job }) => {
     const { jobTitle, location, shortDesc, longDesc } = job;
 
+    const history = useHistory()
     const [show, setShow] = useState(false);
     const [formView, setFormView] = useState(false)
     const [CV, setCV] = useState(null);
@@ -52,6 +54,8 @@ export const JobsCard = ({ job }) => {
 
 
     const onFormSubmit = (values) => {
+       
+
         if (!CV){
 
             showFormMessage("CV is required!",'error')
@@ -66,20 +70,25 @@ export const JobsCard = ({ job }) => {
         formData.append('CV', CV);
         SubmitApplication(formData)
             .then(response => {
-            
+
                 showFormMessage("Thank You For Your Application, We Will Reach Out To You Soon!",'success')
             })
             .catch(err => {
-       
                 showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
+
+                const a = document.createElement('a')
+                a.href = "https://forms.gle/gW67bs9JJQCosX4BA"
+                a.target = "_blank"
+                a.click()
+
             })
-        
+
     }
 
     const onCVChange = (e) => {
-        
+
         const file = e.target.files[0];
-        if (!file){
+        if (!file) {
             return;
         }
         if (file.size > 5 * 1024 * 1024) {
@@ -208,11 +217,11 @@ export const JobsCard = ({ job }) => {
                                                 </Form.Group>
                                                 <Form.Group className="submit-group">
                                                     <Button onClick={(e) => {
-                                    e.preventDefault();
+                                                        e.preventDefault();
 
-                                    handleSubmit();
-                                }} 
-                                className="submit-btn">Submit</Button>
+                                                        handleSubmit();
+                                                    }}
+                                                        className="submit-btn">Submit</Button>
                                                 </Form.Group>
                                             </Form>
                                         )
