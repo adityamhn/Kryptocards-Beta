@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect } from 'react'
+import React, {useEffect, useState } from 'react'
 import './ContactUsPage.scss';
 import { store } from '../../app/store';
 import {changeNavbarMode} from '../../features/NavbarLogo/NavbarLogoSlice'
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button,Spinner } from 'react-bootstrap';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import {SubmitContactForm} from '../../services/contact.service';
@@ -37,21 +37,10 @@ const formInitialValues = {
 
 }
 
-const onFormSubmit = async(values) => {
-    values.phoneNumber = parseInt(values.phoneNumber);
-  
-     SubmitContactForm(values).then(response=>{
-        showFormMessage("Thank You For Contacting Us!",'success');   
-        
-     }).catch(err=>{
-        showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
-     })
-     values.phoneNumber = (values.phoneNumber).toString();
-}
 
 
 export const ContactUsPage = () => {
-
+    const [showLoader,setShowLoader] = useState(false);
     useEffect(() => {
         store.dispatch(changeNavbarMode({ value: "TEXT",show:true }))
         
@@ -60,6 +49,22 @@ export const ContactUsPage = () => {
 
     }, [])
 
+    const onFormSubmit = async(values) => {
+        setShowLoader(true);
+
+            values.phoneNumber = parseInt(values.phoneNumber);
+      
+            SubmitContactForm(values).then(response=>{
+               showFormMessage("Thank You For Contacting Us!",'success');   
+               
+            }).catch(err=>{
+               showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
+            })
+            values.phoneNumber = (values.phoneNumber).toString();
+            setShowLoader(false);
+
+        
+    }
     return (
         <div id="contact-us-main-div">
             <span id="lets">Let's</span>
@@ -136,14 +141,18 @@ export const ContactUsPage = () => {
                                         {touched.message ? errors.message : null}
                                     </Form.Control.Feedback>
                                 </Form.Group>
-                                <Button onClick={(e) => {
-                                    e.preventDefault();
+                                {showLoader ? 
+                                <Spinner animation="border" className="spinner-styling"/>
+ :                              <Button onClick={(e) => {
+    e.preventDefault();
 
-                                    handleSubmit();
-                                }} id="form-submit-button">
-                                    Send
-                </Button>
+    handleSubmit();
+}} id="form-submit-button">
+    Send
+</Button>
 
+                            }
+   
                             </Form>
                         )
                     }}

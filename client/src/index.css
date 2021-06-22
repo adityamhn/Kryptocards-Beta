@@ -26,7 +26,8 @@ code {
 .cancel-button-styling-common{
   font-family: "Reformation" !important;
   border:none !important;
-
+  text-transform: uppercase;
+  
   background:none !important;
   transition:0.4s ease-in-out !important;
 }
