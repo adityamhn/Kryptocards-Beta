@@ -54,7 +54,6 @@ export const JobsCard = ({ job }) => {
 
 
     const onFormSubmit = (values) => {
-<<<<<<< HEAD
        
 
         if (!CV){
@@ -84,35 +83,6 @@ export const JobsCard = ({ job }) => {
 
             })
 
-=======
-        // if (!CV){
-
-        //     showFormMessage("CV is required!",'error')
-        //     return;
-        // }
-        setShowLoader(true);
-       
-            const formData = new FormData();
-            formData.append('name', values.name);
-            formData.append('phone', values.phone);
-            formData.append('email', values.email);
-            formData.append('position', jobTitle);
-            formData.append('message', values.message);
-            formData.append('CV', CV);
-            SubmitApplication(formData)
-                .then(response => {
-                
-                    showFormMessage("Thank You For Your Application, We Will Reach Out To You Soon!",'success')
-                    
-                })
-                .catch(err => {
-           
-                    showFormMessage("There Was A Server Error, Please Try Again Later!",'error')
-                })
-                setShowLoader(false);
-        
-        
->>>>>>> 36552b09c76d06298f95f9cb3a6f2e4486f3391e
     }
 
     const onCVChange = (e) => {
