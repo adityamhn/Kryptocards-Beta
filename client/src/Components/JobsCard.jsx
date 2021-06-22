@@ -216,14 +216,6 @@ export const JobsCard = ({ job }) => {
                                                     </Form.Control.Feedback>
                                                 </Form.Group>
                                                 <Form.Group className="submit-group">
-<<<<<<< HEAD
-                                                    <Button onClick={(e) => {
-                                                        e.preventDefault();
-
-                                                        handleSubmit();
-                                                    }}
-                                                        className="submit-btn">Submit</Button>
-=======
                                                     {!showLoader ?  
                                                 <Button onClick={(e) => {
                                                     e.preventDefault();
@@ -236,7 +228,6 @@ export const JobsCard = ({ job }) => {
                                                 
                                                 }
                                                     
->>>>>>> 36552b09c76d06298f95f9cb3a6f2e4486f3391e
                                                 </Form.Group>
                                             </Form>
                                         )
